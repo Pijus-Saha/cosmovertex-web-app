@@ -90,29 +90,29 @@ const destinations = [
     flag: "🇪🇺",
     country: "Europe",
     tagline: "Greece, Lithuania, Slovenia, Malta — affordable quality education in Europe.",
-    highlight: "4 Countries",
-    href: "/contact",
+    highlight: "Schengen Access",
+    href: "/destinations/europe",
   },
   {
     flag: "🇬🇧",
     country: "United Kingdom",
     tagline: "Russell Group and top UK universities. IELTS and PTE pathways available.",
     highlight: "IELTS / PTE",
-    href: "/contact",
+    href: "/destinations/uk",
   },
   {
     flag: "🇺🇸",
     country: "United States",
     tagline: "Undergraduate and graduate programs across US universities.",
     highlight: "DET / IELTS",
-    href: "/contact",
+    href: "/destinations/usa",
   },
   {
     flag: "🇦🇺",
     country: "Australia",
     tagline: "Group of Eight and regional universities with PTE and IELTS pathways.",
     highlight: "PTE / IELTS",
-    href: "/contact",
+    href: "/destinations/australia",
   },
 ];
 
@@ -263,7 +263,7 @@ export default function HomePage() {
                   ))}
                 </ul>
                 <Link
-                  href="/services"
+                  href={`/services?tab=${service.id}`}
                   className="inline-flex items-center gap-1 text-sm text-[#059669] font-semibold hover:gap-2 transition-all"
                 >
                   Learn More <ArrowRight className="w-3.5 h-3.5" />

@@ -11,17 +11,18 @@ import {
 } from "lucide-react";
 
 const services = [
-  { label: "Duolingo DET Prep", href: "/services" },
-  { label: "EnglishScore C1 CEFR", href: "/services" },
-  { label: "EF SET Preparation", href: "/services" },
-  { label: "IELTS / PTE Coaching", href: "/services" },
+  { label: "Duolingo DET Prep", href: "/services?tab=duolingo" },
+  { label: "EnglishScore C1 CEFR", href: "/services?tab=englishscore" },
+  { label: "EF SET Preparation", href: "/services?tab=efset" },
+  { label: "IELTS / PTE Coaching", href: "/services?tab=ielts-pte" },
 ];
 
 const destinations = [
   { label: "Study in South Korea", href: "/destinations/south-korea" },
-  { label: "Study in Europe", href: "/contact" },
-  { label: "Study in UK / USA", href: "/contact" },
-  { label: "Study in Australia", href: "/contact" },
+  { label: "Study in Europe", href: "/destinations/europe" },
+  { label: "Study in United Kingdom", href: "/destinations/uk" },
+  { label: "Study in United States", href: "/destinations/usa" },
+  { label: "Study in Australia", href: "/destinations/australia" },
 ];
 
 const offices = [
@@ -170,14 +171,19 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-white/40">
-            © {currentYear} COSMOVERTEX · Doctor of SEL / Sky2Edu / Renaissance
-            Edu Care · All rights reserved.
-          </p>
-          <p className="text-xs text-white/30">
-            Partner: Renaissance Edu Care · Banani & Mohakhali DOHS, Dhaka
+      <div className="mt-12 border-t border-slate-200 pt-6 pb-6 text-center text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400">
+        <div className="max-w-7xl mx-auto flex flex-col items-center justify-between gap-2 sm:flex-row sm:px-4">
+          <p>© {currentYear} COSMOVERTEX. All rights reserved.</p>
+          <p className="flex items-center gap-1">
+            Designed & Developed with Next.js by{" "}
+            <a
+              href="https://www.linkedin.com/in/pijus-saha/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-slate-700 underline decoration-slate-400 underline-offset-2 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400"
+            >
+              Pijus Saha
+            </a>
           </p>
         </div>
       </div>
