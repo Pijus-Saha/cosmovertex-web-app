@@ -121,7 +121,10 @@ const localBusinessSchema = {
       },
     },
   ],
-  sameAs: ["https://wa.me/8801316318387"],
+  sameAs: [
+    "https://wa.me/8801316318387",
+    "https://www.facebook.com/share/1cDbjrn6XP/",
+  ],
 };
 
 export default function RootLayout({
