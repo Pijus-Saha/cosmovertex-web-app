@@ -216,6 +216,18 @@ export default function Navbar() {
             </div>
 
             <Link
+              href="/gallery"
+              className={cn(
+                "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 link-underline",
+                pathname === "/gallery"
+                  ? "text-[#10b981] bg-white/10"
+                  : "text-white/80 hover:text-white hover:bg-white/10"
+              )}
+            >
+              Gallery
+            </Link>
+
+            <Link
               href="/contact"
               className={cn(
                 "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 link-underline",
@@ -370,6 +382,18 @@ export default function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
+
+              <Link
+                href="/gallery"
+                className={cn(
+                  "block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors",
+                  pathname === "/gallery"
+                    ? "text-[#10b981] bg-white/10"
+                    : "text-white/80 hover:text-white hover:bg-white/10"
+                )}
+              >
+                Gallery
+              </Link>
 
               <Link
                 href="/contact"

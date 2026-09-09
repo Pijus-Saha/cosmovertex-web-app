@@ -15,6 +15,7 @@ const services = [
   { label: "EnglishScore C1 CEFR", href: "/services?tab=englishscore" },
   { label: "EF SET Preparation", href: "/services?tab=efset" },
   { label: "IELTS / PTE Coaching", href: "/services?tab=ielts-pte" },
+  { label: "Student Success Gallery", href: "/gallery" },
 ];
 
 const destinations = [
