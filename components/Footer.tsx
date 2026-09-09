@@ -177,7 +177,7 @@ export default function Footer() {
           <p className="flex items-center gap-1">
             Designed & Developed with Next.js by{" "}
             <a
-              href="https://www.linkedin.com/in/pijus-saha/"
+              href="https://pijus-saha.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-slate-700 underline decoration-slate-400 underline-offset-2 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400"
