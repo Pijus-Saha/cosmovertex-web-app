@@ -23,7 +23,7 @@ const southKoreaQuickFacts: QuickFact[] = [
     label: "Top Intakes",
     value: "March & September",
     subtext: "Spring (March) is the primary academic session; Fall (September) offers full admissions.",
-    tag: "Next: Sept 2026",
+    tag: "Next: Fall / Sept Intake",
     icon: "intake",
   },
   {

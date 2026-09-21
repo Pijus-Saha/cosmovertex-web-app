@@ -23,7 +23,7 @@ const ukQuickFacts: QuickFact[] = [
     label: "Top Intakes",
     value: "September & January",
     subtext: "September is the primary intake; January/February intake has widespread program availability.",
-    tag: "Next: Sept 2026",
+    tag: "Next: September Intake",
     icon: "intake",
   },
   {

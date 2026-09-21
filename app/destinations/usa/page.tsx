@@ -23,7 +23,7 @@ const usaQuickFacts: QuickFact[] = [
     label: "Top Intakes",
     value: "Fall & Spring",
     subtext: "Fall (August/September) has the most scholarships; Spring (January) is also open.",
-    tag: "Next: Fall 2026",
+    tag: "Next: Fall Intake",
     icon: "intake",
   },
   {

@@ -409,13 +409,13 @@ export default function HomePage() {
                 <span className="inline-flex px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700 shrink-0">
                   🇰🇷 South Korea
                 </span>
-                <span className="text-xs text-slate-400">Intake 2026</span>
+                <span className="text-xs text-slate-400">Upcoming Intake</span>
               </div>
               <h3 className="font-heading font-bold text-[#0A2342] dark:text-slate-100 text-lg mb-2">
-                2026 Spring Intake Now Open — South Korean Universities
+                Spring Intake Now Open — South Korean Universities
               </h3>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
-                Applications for the Spring 2026 intake are now open at Seoul
+                Applications for the upcoming Spring intake are now open at Seoul
                 National University, Yonsei, Korea University, Hanyang, Kyung
                 Hee, and Sungkyunkwan University. EF SET C1 scores are accepted
                 by these institutions. Early applicants get priority processing.

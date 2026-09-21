@@ -23,7 +23,7 @@ const europeQuickFacts: QuickFact[] = [
     label: "Top Intakes",
     value: "September & February",
     subtext: "September is the main intake; rolling spring admissions available.",
-    tag: "Next: Fall 2026",
+    tag: "Next: Fall Intake",
     icon: "intake",
   },
   {

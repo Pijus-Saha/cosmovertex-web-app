@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "audit:sqa": "node .agents/skills/sqa-site-audit/scripts/run-sqa-audit.js"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
