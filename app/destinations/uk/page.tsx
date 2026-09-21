@@ -76,10 +76,9 @@ const ukHighlights: HighlightItem[] = [
 ];
 
 const ukIntakes = [
-  "September / October 2026",
-  "January / February 2027",
-  "May / June 2027",
-  "September 2027",
+  "Autumn / September Intake",
+  "Spring / January Intake",
+  "Summer / May Intake",
 ];
 
 export default function UKPage() {
@@ -93,7 +92,7 @@ export default function UKPage() {
       quickFacts={ukQuickFacts}
       highlights={ukHighlights}
       intakeOptions={ukIntakes}
-      defaultIntake="September / October 2026"
+      defaultIntake="Autumn / September Intake"
     />
   );
 }

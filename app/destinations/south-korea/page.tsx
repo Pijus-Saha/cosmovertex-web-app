@@ -76,9 +76,9 @@ const southKoreaHighlights: HighlightItem[] = [
 ];
 
 const southKoreaIntakes = [
-  "Fall (September 2026)",
-  "Spring (March 2027)",
-  "Fall (September 2027)",
+  "Fall / September Intake",
+  "Spring / March Intake",
+  "Summer Language Session",
 ];
 
 export default function SouthKoreaPage() {
@@ -92,7 +92,7 @@ export default function SouthKoreaPage() {
       quickFacts={southKoreaQuickFacts}
       highlights={southKoreaHighlights}
       intakeOptions={southKoreaIntakes}
-      defaultIntake="Fall (September 2026)"
+      defaultIntake="Fall / September Intake"
     />
   );
 }

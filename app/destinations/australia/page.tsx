@@ -76,9 +76,9 @@ const australiaHighlights: HighlightItem[] = [
 ];
 
 const australiaIntakes = [
-  "Semester 1 (February 2027)",
-  "Semester 2 (July 2027)",
-  "Semester 1 (February 2028)",
+  "Semester 1 (February Intake)",
+  "Semester 2 (July Intake)",
+  "Summer / November Intake",
 ];
 
 export default function AustraliaPage() {
@@ -92,7 +92,7 @@ export default function AustraliaPage() {
       quickFacts={australiaQuickFacts}
       highlights={australiaHighlights}
       intakeOptions={australiaIntakes}
-      defaultIntake="Semester 1 (February 2027)"
+      defaultIntake="Semester 1 (February Intake)"
     />
   );
 }

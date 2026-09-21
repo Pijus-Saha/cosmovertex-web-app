@@ -24,14 +24,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { normalizeBdPhoneNumber } from "@/lib/utils";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   phone: z
     .string()
+    .min(10, "Phone number must be at least 10 digits")
     .regex(
-      /^(\+8801|01)[3-9]\d{8}$/,
-      "Enter a valid Bangladeshi phone number (e.g. 01316318387)"
+      /^(\+?8801|01|\+?[0-9])[0-9\s-]{8,14}$/,
+      "Enter a valid mobile number (e.g. 01316318387 or +8801316318387)"
     ),
   email: z.string().email("Enter a valid email address").or(z.literal("")),
   preferredTest: z.string().min(1, "Please select an English test"),
@@ -88,10 +90,14 @@ export default function DestinationLeadForm({
   const onSubmit = async (data: DestinationFormData) => {
     setStatus("loading");
     try {
+      const normalizedData = {
+        ...data,
+        phone: normalizeBdPhoneNumber(data.phone),
+      };
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(normalizedData),
       });
 
       if (!res.ok) throw new Error("Submission failed");
@@ -146,7 +152,9 @@ export default function DestinationLeadForm({
             </p>
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href="https://wa.me/8801316318387"
+                href={`https://wa.me/8801316318387?text=${encodeURIComponent(
+                  `Hello COSMOVERTEX, I just submitted an application for ${destinationLabel}. Please contact me.`
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-semibold text-sm transition-colors"

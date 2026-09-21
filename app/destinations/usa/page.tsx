@@ -76,10 +76,9 @@ const usaHighlights: HighlightItem[] = [
 ];
 
 const usaIntakes = [
-  "Fall (August / September 2026)",
-  "Spring (January 2027)",
-  "Summer (May 2027)",
-  "Fall (August 2027)",
+  "Fall / September Intake",
+  "Spring / January Intake",
+  "Summer / May Intake",
 ];
 
 export default function USAPage() {
@@ -93,7 +92,7 @@ export default function USAPage() {
       quickFacts={usaQuickFacts}
       highlights={usaHighlights}
       intakeOptions={usaIntakes}
-      defaultIntake="Fall (August / September 2026)"
+      defaultIntake="Fall / September Intake"
     />
   );
 }

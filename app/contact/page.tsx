@@ -62,12 +62,13 @@ export default function ContactPage() {
             <span className="text-white/80">Contact</span>
           </div>
           <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-4">
-            Let&apos;s Plan Your{" "}
-            <span className="text-gradient-emerald">Study Abroad Journey</span>
+            Book Your Free{" "}
+            <span className="text-gradient-emerald">Counseling Session</span>
           </h1>
-          <p className="text-white/70 text-xl max-w-2xl leading-relaxed">
-            Book a free counseling session. Our experts will help you choose the
-            right test, destination, and university.
+          <p className="text-white/75 text-xl max-w-2xl leading-relaxed">
+            Personalized guidance for <strong>English Proficiency Test Prep</strong>,{" "}
+            <strong>Study Abroad Admissions</strong>, and <strong>Visa Processing</strong>.
+            Visit us in <strong>Banani</strong>, <strong>Mohakhali DOHS</strong>, or connect <strong>Online</strong>.
           </p>
         </div>
       </section>
@@ -78,14 +79,18 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
             {/* Left: Lead Form */}
             <div className="lg:col-span-3">
-              <div className="bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-10 shadow-sm border border-slate-100 dark:border-slate-700">
+              <div className="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-100 dark:border-slate-700">
                 <div className="mb-8">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold mb-3">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    Free 30-Minute 1-on-1 Consultation
+                  </div>
                   <h2 className="font-heading text-2xl md:text-3xl font-bold text-[#0A2342] dark:text-slate-100 mb-2">
                     Book Your Free Counseling
                   </h2>
-                  <p className="text-slate-500 dark:text-slate-400">
-                    Fill in your details and we&apos;ll contact you within 24 hours
-                    with a personalized plan.
+                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    Select your service, preferred test or destination, and counseling mode.
+                    Our certified mentors will craft an actionable, university-aligned roadmap.
                   </p>
                 </div>
                 <LeadForm />

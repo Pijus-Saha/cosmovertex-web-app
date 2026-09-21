@@ -69,18 +69,20 @@ export default function ServicesTabs({ services }: ServicesTabsProps) {
           onValueChange={handleTabChange}
           className="w-full"
         >
-          <TabsList className="flex flex-wrap h-auto gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded-2xl mb-10 w-full justify-start">
-            {services.map((s) => (
-              <TabsTrigger
-                key={s.id}
-                value={s.id}
-                id={s.id}
-                className="rounded-xl px-4 py-2 text-sm font-semibold data-[state=active]:bg-[#0A2342] data-[state=active]:text-white cursor-pointer"
-              >
-                {s.icon} {s.shortName}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+          <div className="overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 mb-8 sm:mb-10">
+            <TabsList className="inline-flex w-auto min-w-full sm:min-w-0 sm:w-auto h-auto gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded-2xl justify-start">
+              {services.map((s) => (
+                <TabsTrigger
+                  key={s.id}
+                  value={s.id}
+                  id={s.id}
+                  className="rounded-xl px-4 py-2.5 text-xs sm:text-sm font-semibold whitespace-nowrap shrink-0 data-[state=active]:bg-[#0A2342] data-[state=active]:text-white cursor-pointer transition-all"
+                >
+                  <span className="mr-1.5 text-base">{s.icon}</span> {s.shortName}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
 
           {services.map((service) => (
             <TabsContent key={service.id} value={service.id}>

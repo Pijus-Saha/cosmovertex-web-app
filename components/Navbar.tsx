@@ -61,7 +61,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close dropdown on outside click
+  // Close dropdown on outside click or Escape key
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
@@ -71,8 +71,18 @@ export default function Navbar() {
         setDestinationsOpen(false);
       }
     };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setDestinationsOpen(false);
+        setIsOpen(false);
+      }
+    };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const [prevPathname, setPrevPathname] = useState(pathname);
@@ -282,9 +292,11 @@ export default function Navbar() {
             <ThemeToggle />
             <button
               id="mobile-menu-toggle"
-              className="p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+              className="p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -297,13 +309,15 @@ export default function Navbar() {
         {isOpen && (
           <motion.div
             id="mobile-menu"
+            role="region"
+            aria-label="Mobile Navigation"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className="md:hidden overflow-hidden glass-navy border-t border-white/10"
           >
-            <div className="px-4 py-4 space-y-1">
+            <div className="px-4 py-4 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] space-y-1">
               <Link
                 href="/"
                 className={cn(

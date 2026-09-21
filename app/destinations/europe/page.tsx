@@ -76,9 +76,9 @@ const europeHighlights: HighlightItem[] = [
 ];
 
 const europeIntakes = [
-  "Fall (September / October 2026)",
-  "Spring (February 2027)",
-  "Fall (September 2027)",
+  "Fall / September Intake",
+  "Spring / February Intake",
+  "Summer Session",
 ];
 
 export default function EuropePage() {
@@ -92,7 +92,7 @@ export default function EuropePage() {
       quickFacts={europeQuickFacts}
       highlights={europeHighlights}
       intakeOptions={europeIntakes}
-      defaultIntake="Fall (September / October 2026)"
+      defaultIntake="Fall / September Intake"
     />
   );
 }

@@ -341,7 +341,7 @@ export default function SuccessGallery() {
           <div
             role="dialog"
             aria-modal="true"
-            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-xl animate-in fade-in duration-200"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-xl animate-in fade-in duration-200"
             onClick={() => setActiveItem(null)}
           >
             <div
@@ -365,7 +365,7 @@ export default function SuccessGallery() {
                 </div>
                 <button
                   onClick={() => setActiveItem(null)}
-                  className="ml-3 shrink-0 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors cursor-pointer"
+                  className="ml-3 shrink-0 w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                   aria-label="Close modal"
                 >
                   <X className="w-5 h-5" />
