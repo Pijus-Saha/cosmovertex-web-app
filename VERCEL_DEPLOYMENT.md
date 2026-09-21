@@ -88,13 +88,13 @@ Sitemap: https://yourdomain.com/sitemap.xml
 3. Create an API key under **API Keys**
 4. Set `RESEND_API_KEY` in Vercel environment variables
 5. Set `RESEND_FROM_EMAIL` to `noreply@cosmovertex.edu.bd` (or your verified domain email)
-6. Leads will now email to `cosmovertex@gmail.com` with a WhatsApp reply button
+6. Leads will now email to `info@cosmovertex.com` with a WhatsApp reply button
 
 ---
 
 ## Post-Launch Checklist
 
-- [ ] Test contact form submission (check inbox at `cosmovertex@gmail.com`)
+- [ ] Test contact form submission (check inbox at `info@cosmovertex.com`)
 - [ ] Verify WhatsApp floating button opens `https://wa.me/8801316318387`
 - [ ] Check mobile layout at 375px width
 - [ ] Submit sitemap to Google Search Console: `https://yourdomain.com/sitemap.xml`

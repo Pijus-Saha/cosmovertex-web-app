@@ -84,11 +84,11 @@ export default function Footer() {
                 +880 1346-990025
               </a>
               <a
-                href="mailto:cosmovertex@gmail.com"
+                href="mailto:info@cosmovertex.com"
                 className="flex items-center gap-2 text-sm hover:text-white transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-[#10b981]" />
-                cosmovertex@gmail.com
+                info@cosmovertex.com
               </a>
               <a
                 href="https://wa.me/8801316318387"

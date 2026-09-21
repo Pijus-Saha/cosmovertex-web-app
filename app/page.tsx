@@ -528,7 +528,7 @@ export default function HomePage() {
             </span>
             <span className="w-1 h-1 rounded-full bg-white/40" />
             <span className="flex items-center gap-1.5">
-              <Mail className="w-3.5 h-3.5" /> cosmovertex@gmail.com
+              <Mail className="w-3.5 h-3.5" /> info@cosmovertex.com
             </span>
           </div>
         </div>

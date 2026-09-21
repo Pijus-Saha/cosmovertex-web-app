@@ -371,7 +371,7 @@ Please confirm my counseling appointment schedule. Thank you!`;
                 Your counseling booking has been routed to our senior advisor desk.
                 We have notified our admissions team at{" "}
                 <code className="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-slate-700 dark:text-slate-300 font-mono">
-                  cosmovertex@gmail.com
+                  info@cosmovertex.com
                 </code>
                 .
               </p>

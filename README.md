@@ -43,7 +43,7 @@ COSMOVERTEX empowers Bangladeshi students to achieve their international educati
 | **Banani** *(Sky2Edu / CosmoVertex)* | House #38, Road #02, 1st Floor, Banani, Dhaka - 1213 | +880 1316-318387 | Mon–Sat, 10 AM – 7 PM |
 | **Mohakhali DOHS** *(Renaissance Edu Care)* | House #409, Road #29, Level 5A, Mohakhali DOHS, Dhaka - 1206 | +880 1346-990025 | Mon–Sat, 10 AM – 7 PM |
 
-- 📧 **Email**: [cosmovertex@gmail.com](mailto:cosmovertex@gmail.com)
+- 📧 **Email**: [info@cosmovertex.com](mailto:info@cosmovertex.com)
 - 💬 **WhatsApp**: [+880 1316-318387](https://wa.me/8801316318387)
 - 📘 **Facebook**: [facebook.com/cosmovertex](https://www.facebook.com/share/1cDbjrn6XP/)
 
@@ -60,7 +60,7 @@ COSMOVERTEX empowers Bangladeshi students to achieve their international educati
 - Unified contact and destination assessment forms backed by **React Hook Form** + **Zod** schema validation.
 - Dual-channel fulfillment:
   - Direct 1-click **WhatsApp instant consultation** with auto-formatted inquiry parameters.
-  - Server-side email notifications routed through **Resend API** to `cosmovertex@gmail.com` with console fallback in development.
+  - Server-side email notifications routed through **Resend API** to `info@cosmovertex.com` with console fallback in development.
 
 ### 3. Dedicated Destination Portals
 - Modular destination guides for **Australia**, **Europe**, **South Korea**, **UK**, and **USA**.
@@ -192,7 +192,7 @@ NEXT_PUBLIC_SITE_URL=https://cosmovertex.edu.bd
 
 # Email notifications via Resend (https://resend.com)
 RESEND_API_KEY=re_your_api_key_here
-NOTIFICATION_EMAIL=cosmovertex@gmail.com
+NOTIFICATION_EMAIL=info@cosmovertex.com
 
 # Direct WhatsApp contact number (international format without +)
 NEXT_PUBLIC_WHATSAPP_NUMBER=8801316318387

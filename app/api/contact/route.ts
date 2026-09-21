@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
   });
 
   const notificationEmail =
-    process.env.NOTIFICATION_EMAIL || "cosmovertex@gmail.com";
+    process.env.NOTIFICATION_EMAIL || "info@cosmovertex.com";
   const apiKey = process.env.RESEND_API_KEY;
 
   const htmlBody = `

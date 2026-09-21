@@ -92,7 +92,7 @@ const localBusinessSchema = {
   alternateName: "Doctor of SEL | Sky2Edu | Renaissance Edu Care",
   url: siteUrl,
   telephone: ["+8801316318387", "+8801346990025"],
-  email: "cosmovertex@gmail.com",
+  email: "info@cosmovertex.com",
   description:
     "English proficiency test preparation (Duolingo DET, EnglishScore C1, EF SET, IELTS, PTE) and study abroad consultancy for Europe, South Korea, UK, USA, and Australia.",
   areaServed: "Bangladesh",

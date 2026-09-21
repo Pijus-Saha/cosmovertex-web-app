@@ -26,7 +26,7 @@ const offices = [
     address: "House #38, Road #02, 1st Floor, Banani, Dhaka - 1213",
     phone: "+880 1316-318387",
     phone2: null,
-    email: "cosmovertex@gmail.com",
+    email: "info@cosmovertex.com",
     whatsappMsg: "Hello, I'd like to visit the Banani office.",
     hours: "Sat–Thu: 10am – 8pm",
     icon: "🏢",
@@ -39,7 +39,7 @@ const offices = [
     address: "House #409, Road #29, Level 5A, Mohakhali DOHS, Dhaka - 1206",
     phone: "+880 1346-990025",
     phone2: "+880 1316-318387",
-    email: "cosmovertex@gmail.com",
+    email: "info@cosmovertex.com",
     whatsappMsg: "Hello, I'd like to visit the Mohakhali DOHS office.",
     hours: "Sat–Thu: 10am – 7pm",
     icon: "🏫",
@@ -143,7 +143,7 @@ export default function ContactPage() {
                   {/* Email */}
                   <a
                     id="contact-email"
-                    href="mailto:cosmovertex@gmail.com"
+                    href="mailto:info@cosmovertex.com"
                     className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-100 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-600 flex items-center justify-center">
@@ -151,7 +151,7 @@ export default function ContactPage() {
                     </div>
                     <div className="flex-1">
                       <p className="font-semibold text-[#0A2342] dark:text-slate-100 text-sm">Email</p>
-                      <p className="text-slate-600 dark:text-slate-400 text-sm">cosmovertex@gmail.com</p>
+                      <p className="text-slate-600 dark:text-slate-400 text-sm">info@cosmovertex.com</p>
                     </div>
                   </a>
 
