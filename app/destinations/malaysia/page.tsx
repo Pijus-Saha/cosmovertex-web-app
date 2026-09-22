@@ -5,7 +5,7 @@ import DestinationSimpleLayout, {
 } from "@/components/destination/DestinationSimpleLayout";
 
 export const metadata: Metadata = {
-  title: "Study in Malaysia & Malaysia Pathway Programs (USA, UK, Canada, Australia) | COSMOVERTEX",
+  title: "Study in Malaysia & Malaysia Pathway Programs (USA, UK, Canada, Australia)",
   description:
     "Study in Malaysia with COSMOVERTEX. Access affordable quality degrees, foreign branch campuses (Monash, Nottingham, Curtin), and innovative Malaysia Pathway Programs (1+3, 2+2, 2+1) transferring seamlessly to the USA, UK, Canada, and Australia.",
   alternates: { canonical: "/destinations/malaysia" },

@@ -5,7 +5,7 @@ import DestinationSimpleLayout, {
 } from "@/components/destination/DestinationSimpleLayout";
 
 export const metadata: Metadata = {
-  title: "Study in Europe — Lithuania, Slovenia, Greece, Hungary, Sweden, Finland & Italy | COSMOVERTEX",
+  title: "Study in Europe — Lithuania, Slovenia, Greece, Hungary, Sweden, Finland & Italy",
   description:
     "Explore personalized European study-abroad pathways with COSMOVERTEX. Study across Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, and Italy with tuition from EUR 1,500–5,000/year, 29-country Schengen visa mobility, and EnglishScore C1/DET acceptance.",
   alternates: { canonical: "/destinations/europe" },

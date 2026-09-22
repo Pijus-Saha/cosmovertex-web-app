@@ -5,7 +5,7 @@ import DestinationSimpleLayout, {
 } from "@/components/destination/DestinationSimpleLayout";
 
 export const metadata: Metadata = {
-  title: "Study in Canada — Top DLI Universities, PGWP & PR Pathways | COSMOVERTEX",
+  title: "Study in Canada — Top DLI Universities, PGWP & PR Pathways",
   description:
     "Study in Canada with COSMOVERTEX. Personalized admissions to top Designated Learning Institutions (DLIs), up to 3 years Post-Graduation Work Permit (PGWP), co-op internships, and clear PR pathways.",
   alternates: { canonical: "/destinations/canada" },

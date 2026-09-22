@@ -183,6 +183,8 @@ export default function Navbar() {
                     : "text-white/80 hover:text-white hover:bg-white/10"
                 )}
                 aria-expanded={destinationsOpen}
+                aria-haspopup="true"
+                aria-controls="desktop-dest-menu"
               >
                 <span>Destinations</span>
                 <ChevronDown
@@ -196,6 +198,9 @@ export default function Navbar() {
               <AnimatePresence>
                 {destinationsOpen && (
                   <motion.div
+                    id="desktop-dest-menu"
+                    role="region"
+                    aria-label="Destinations menu"
                     initial={{ opacity: 0, y: 10, scale: 0.96 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.96 }}
@@ -368,6 +373,8 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setMobileDestOpen(!mobileDestOpen)}
+                  aria-expanded={mobileDestOpen}
+                  aria-controls="mobile-dest-accordion"
                   className={cn(
                     "w-full flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-colors",
                     isDestinationActive
@@ -387,6 +394,7 @@ export default function Navbar() {
                 <AnimatePresence>
                   {mobileDestOpen && (
                     <motion.div
+                      id="mobile-dest-accordion"
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}

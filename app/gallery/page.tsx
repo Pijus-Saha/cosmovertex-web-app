@@ -15,7 +15,7 @@ import SuccessGallery from "@/components/SuccessGallery";
 import VisaSuccessVideos from "@/components/VisaSuccessVideos";
 
 export const metadata: Metadata = {
-  title: "Student Success Stories & Proof of Excellence — COSMOVERTEX",
+  title: "Student Success Stories & Proof of Excellence",
   description:
     "Explore genuine score cards, EnglishScore C1 credentials, Duolingo DET achievements, and Europe & South Korea visa approvals from COSMOVERTEX students in Dhaka.",
   alternates: { canonical: "/gallery" },

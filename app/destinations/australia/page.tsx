@@ -5,7 +5,7 @@ import DestinationSimpleLayout, {
 } from "@/components/destination/DestinationSimpleLayout";
 
 export const metadata: Metadata = {
-  title: "Study in Australia — Genuine Student (GS) & Post-Study Work | COSMOVERTEX",
+  title: "Study in Australia — Genuine Student (GS) & Post-Study Work",
   description:
     "Expert Australian study visa consultancy in Dhaka. Tuition AUD 20,000–35,000/year, February and July intakes, PTE Academic & IELTS accepted, 2–4 years Post-Study Work (PSW) rights, and Genuine Student (GS) compliance.",
   alternates: { canonical: "/destinations/australia" },

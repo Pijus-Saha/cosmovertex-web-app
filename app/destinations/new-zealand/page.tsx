@@ -5,7 +5,7 @@ import DestinationSimpleLayout, {
 } from "@/components/destination/DestinationSimpleLayout";
 
 export const metadata: Metadata = {
-  title: "Study in New Zealand — 3-Yr Post-Study Work, Green List & Top Unis | COSMOVERTEX",
+  title: "Study in New Zealand — 3-Yr Post-Study Work, Green List & Top Unis",
   description:
     "Study in New Zealand with COSMOVERTEX. All 8 public universities ranked in the global top 3%, up to 3 years Post-Study Work Visa, Straight-to-Residence Green List pathways, and 20 hrs/week student work rights.",
   alternates: { canonical: "/destinations/new-zealand" },

@@ -5,7 +5,7 @@ import DestinationSimpleLayout, {
 } from "@/components/destination/DestinationSimpleLayout";
 
 export const metadata: Metadata = {
-  title: "Study in South Korea — SKY Universities, EF SET & High Visa Ratio | COSMOVERTEX",
+  title: "Study in South Korea — SKY Universities, EF SET & High Visa Ratio",
   description:
     "Study in South Korea from Bangladesh. Tuition USD 3,000–8,000/year, March and September intakes, EF SET, DET, or IELTS accepted, top SKY universities (Seoul National, Yonsei, Korea University), and high visa approval rates.",
   alternates: { canonical: "/destinations/south-korea" },

@@ -12,7 +12,7 @@ import {
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Contact COSMOVERTEX — Book Free Counseling",
+  title: "Book Free Counseling & Study Abroad Consultation",
   description:
     "Book a free counseling session with COSMOVERTEX. Personalized study-abroad pathways to USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia (including Malaysia Pathway Programs), and Europe. Expert coaching for DET, CEFR C1 Advanced EnglishScore, EF SET, IELTS, and PTE.",
   alternates: { canonical: "/contact" },

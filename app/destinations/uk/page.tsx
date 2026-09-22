@@ -5,7 +5,7 @@ import DestinationSimpleLayout, {
 } from "@/components/destination/DestinationSimpleLayout";
 
 export const metadata: Metadata = {
-  title: "Study in the United Kingdom — 1-Year Masters & Graduate Route PSW | COSMOVERTEX",
+  title: "Study in the United Kingdom — 1-Year Masters & Graduate Route PSW",
   description:
     "Study in the UK from Bangladesh. 1-Year Master's degrees, 2-Year Graduate Route Post-Study Work (PSW), tuition GBP 12,000–18,000/year, EnglishScore C1, DET, IELTS, or MOI waivers, and end-to-end CAS & visa guidance.",
   alternates: { canonical: "/destinations/uk" },

@@ -17,7 +17,7 @@ import {
 import ServicesTabs, { TestService } from "@/components/ServicesTabs";
 
 export const metadata: Metadata = {
-  title: "English Proficiency Coaching & Global Study Pathways | COSMOVERTEX",
+  title: "English Proficiency Coaching & Global Study Pathways",
   description:
     "Expert English proficiency coaching for Duolingo DET, CEFR C1 Advanced – EnglishScore Core Skills Test, EF SET, IELTS, and PTE. Personalized study-abroad pathways to USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia, and Europe.",
   alternates: { canonical: "/services" },

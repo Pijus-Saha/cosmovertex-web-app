@@ -5,7 +5,7 @@ import DestinationSimpleLayout, {
 } from "@/components/destination/DestinationSimpleLayout";
 
 export const metadata: Metadata = {
-  title: "Study in the United States — Scholarships, STEM OPT & F-1 Visa | COSMOVERTEX",
+  title: "Study in the United States — Scholarships, STEM OPT & F-1 Visa",
   description:
     "Study in the USA with COSMOVERTEX. Tuition USD 15,000–28,000/year, up to 3 years STEM OPT work extension, Duolingo English Test (DET) acceptance at 1,500+ universities, merit scholarships, and 1-on-1 F-1 visa interview preparation.",
   alternates: { canonical: "/destinations/usa" },

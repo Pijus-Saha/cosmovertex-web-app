@@ -70,7 +70,7 @@ const VISA_VIDEOS: VisaVideo[] = [
     destination: "United Kingdom",
     flag: "🇬🇧",
     category: "uk",
-    title: "Alhamdulillah! UK Student Visa Received 🇬🇧",
+    title: "UK Student Visa Received 🇬🇧",
     milestone: "UK Higher Education Visa Approved",
     details: [
       "Official CAS clearance & university acceptance",
@@ -171,11 +171,10 @@ export default function VisaSuccessVideos({
 
   return (
     <section
-      className={`${
-        compact
+      className={`${compact
           ? "py-14 sm:py-18 bg-[#071322] border-t border-b border-white/10"
           : "py-20 md:py-28 bg-gradient-to-b from-slate-900 via-[#0B1528] to-slate-900"
-      } text-white relative overflow-hidden`}
+        } text-white relative overflow-hidden`}
     >
       {/* Background ambient decorative blurs */}
       <div className="absolute inset-0 pointer-events-none">
@@ -224,31 +223,28 @@ export default function VisaSuccessVideos({
             <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
               <button
                 onClick={() => setActiveTab("all")}
-                className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border ${
-                  activeTab === "all"
+                className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border ${activeTab === "all"
                     ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold"
                     : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
-                }`}
+                  }`}
               >
                 All Visa Videos ({VISA_VIDEOS.length})
               </button>
               <button
                 onClick={() => setActiveTab("australia")}
-                className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border flex items-center gap-1.5 ${
-                  activeTab === "australia"
+                className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border flex items-center gap-1.5 ${activeTab === "australia"
                     ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold"
                     : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
-                }`}
+                  }`}
               >
                 <span>🇦🇺</span> Australia Visa Stories (2)
               </button>
               <button
                 onClick={() => setActiveTab("uk")}
-                className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border flex items-center gap-1.5 ${
-                  activeTab === "uk"
+                className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border flex items-center gap-1.5 ${activeTab === "uk"
                     ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold"
                     : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
-                }`}
+                  }`}
               >
                 <span>🇬🇧</span> United Kingdom (1)
               </button>
@@ -305,6 +301,7 @@ export default function VisaSuccessVideos({
                           href={video.shareUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label="Watch video on Facebook"
                           className="w-8 h-8 rounded-full bg-[#1877F2]/20 hover:bg-[#1877F2] text-white flex items-center justify-center border border-[#1877F2]/40 transition-colors"
                           title="Watch on Facebook"
                         >
