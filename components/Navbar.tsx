@@ -115,6 +115,21 @@ export default function Navbar() {
 
   const isDestinationActive = pathname.startsWith("/destinations");
 
+  const handleNavClick = (href: string) => (e: React.MouseEvent) => {
+    if (pathname === href) {
+      e.preventDefault();
+      if (typeof window !== "undefined") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    } else {
+      if (typeof window !== "undefined") {
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+    }
+    setIsOpen(false);
+    setDestinationsOpen(false);
+  };
+
   return (
     <header
       className={cn(
@@ -127,7 +142,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center group shrink-0">
+          <Link
+            href="/"
+            onClick={handleNavClick("/")}
+            className="flex items-center group shrink-0"
+          >
             <div className="bg-white rounded-xl px-2 py-1 shadow-md group-hover:shadow-lg group-hover:scale-[1.03] transition-all duration-200">
               <Image
                 src="/cosmovertex-logo.png"
@@ -144,6 +163,7 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-1">
             <Link
               href="/"
+              onClick={handleNavClick("/")}
               className={cn(
                 "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 link-underline",
                 pathname === "/"
@@ -156,6 +176,7 @@ export default function Navbar() {
 
             <Link
               href="/services"
+              onClick={handleNavClick("/services")}
               className={cn(
                 "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 link-underline",
                 pathname === "/services"
@@ -219,6 +240,7 @@ export default function Navbar() {
                           <Link
                             key={item.href}
                             href={item.href}
+                            onClick={handleNavClick(item.href)}
                             className={cn(
                               "flex items-start gap-3 p-2.5 rounded-xl text-left transition-all duration-150 group",
                               isActive
@@ -253,6 +275,7 @@ export default function Navbar() {
 
             <Link
               href="/gallery"
+              onClick={handleNavClick("/gallery")}
               className={cn(
                 "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 link-underline",
                 pathname === "/gallery"
@@ -265,6 +288,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
+              onClick={handleNavClick("/contact")}
               className={cn(
                 "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 link-underline",
                 pathname === "/contact"
@@ -307,6 +331,7 @@ export default function Navbar() {
             <ThemeToggle />
             <Link
               href="/contact"
+              onClick={handleNavClick("/contact")}
               className="px-4 py-2 rounded-lg bg-amber-gradient text-amber-900 font-semibold text-sm hover:opacity-90 transition-all hover:scale-[1.03] shadow-md shadow-amber-500/20"
             >
               Book Free Counseling
@@ -346,6 +371,7 @@ export default function Navbar() {
             <div className="px-4 py-4 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] space-y-1">
               <Link
                 href="/"
+                onClick={handleNavClick("/")}
                 className={cn(
                   "block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors",
                   pathname === "/"
@@ -358,6 +384,7 @@ export default function Navbar() {
 
               <Link
                 href="/services"
+                onClick={handleNavClick("/services")}
                 className={cn(
                   "block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors",
                   pathname === "/services"
@@ -405,6 +432,7 @@ export default function Navbar() {
                         <Link
                           key={item.href}
                           href={item.href}
+                          onClick={handleNavClick(item.href)}
                           className={cn(
                             "flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-colors",
                             pathname === item.href
@@ -428,6 +456,7 @@ export default function Navbar() {
 
               <Link
                 href="/gallery"
+                onClick={handleNavClick("/gallery")}
                 className={cn(
                   "block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors",
                   pathname === "/gallery"
@@ -440,6 +469,7 @@ export default function Navbar() {
 
               <Link
                 href="/contact"
+                onClick={handleNavClick("/contact")}
                 className={cn(
                   "block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors",
                   pathname === "/contact"
@@ -477,6 +507,7 @@ export default function Navbar() {
                 </a>
                 <Link
                   href="/contact"
+                  onClick={handleNavClick("/contact")}
                   className="block text-center px-4 py-2.5 rounded-lg bg-amber-gradient text-amber-900 font-semibold text-sm"
                 >
                   Book Free Counseling
