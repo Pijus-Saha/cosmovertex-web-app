@@ -11,18 +11,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 const destinationLinks = [
   {
-    href: "/destinations/south-korea",
-    label: "South Korea",
-    flag: "🇰🇷",
-    badge: "EF SET C1",
-    desc: "SKY Universities & GKS Scholarships",
-  },
-  {
-    href: "/destinations/europe",
-    label: "Europe (Schengen)",
-    flag: "🇪🇺",
-    badge: "€1.5k–€4.5k",
-    desc: "Germany, Poland, Lithuania, Malta & more",
+    href: "/destinations/usa",
+    label: "United States",
+    flag: "🇺🇸",
+    badge: "3-Yr STEM OPT",
+    desc: "Merit scholarships & F-1 visa prep",
   },
   {
     href: "/destinations/uk",
@@ -32,11 +25,11 @@ const destinationLinks = [
     desc: "2-Yr PSW & with/without IELTS routes",
   },
   {
-    href: "/destinations/usa",
-    label: "United States",
-    flag: "🇺🇸",
-    badge: "3-Yr STEM OPT",
-    desc: "Merit scholarships & F-1 visa prep",
+    href: "/destinations/canada",
+    label: "Canada",
+    flag: "🇨🇦",
+    badge: "PGWP Rights",
+    desc: "Top DLIs, co-op work & PR pathways",
   },
   {
     href: "/destinations/australia",
@@ -44,6 +37,34 @@ const destinationLinks = [
     flag: "🇦🇺",
     badge: "Regional PSW",
     desc: "High wages & Genuine Student guidance",
+  },
+  {
+    href: "/destinations/new-zealand",
+    label: "New Zealand",
+    flag: "🇳🇿",
+    badge: "3-Yr Open Work",
+    desc: "Top 3% unis & Green List pathways",
+  },
+  {
+    href: "/destinations/south-korea",
+    label: "South Korea",
+    flag: "🇰🇷",
+    badge: "EF SET C1",
+    desc: "SKY Universities & GKS Scholarships",
+  },
+  {
+    href: "/destinations/malaysia",
+    label: "Malaysia & Pathways",
+    flag: "🇲🇾",
+    badge: "US/UK/CA/AU Transfer",
+    desc: "Direct study or Malaysia Pathway Programs",
+  },
+  {
+    href: "/destinations/europe",
+    label: "Europe (Schengen)",
+    flag: "🇪🇺",
+    badge: "€1.5k–€5k",
+    desc: "Lithuania, Slovenia, Greece, Hungary, Sweden, Finland & Italy",
   },
 ];
 
@@ -179,9 +200,9 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.96 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 w-72 pt-2 z-50"
+                    className="absolute top-full left-0 w-80 pt-2 z-50"
                   >
-                    <div className="bg-[#0A2342]/95 dark:bg-slate-900/95 backdrop-blur-xl border border-white/15 dark:border-slate-800 rounded-2xl p-2.5 shadow-2xl shadow-black/40">
+                    <div className="bg-[#0A2342]/95 dark:bg-slate-900/95 backdrop-blur-xl border border-white/15 dark:border-slate-800 rounded-2xl p-2.5 shadow-2xl shadow-black/40 max-h-[80vh] overflow-y-auto">
                       <div className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400 border-b border-white/10 dark:border-slate-800 mb-1 flex items-center gap-1.5">
                         <Globe className="w-3 h-3 text-emerald-400" />
                         Explore Study Destinations
@@ -263,7 +284,7 @@ export default function Navbar() {
               <span className="hidden lg:inline">WhatsApp</span>
             </a>
             <a
-              href="https://www.facebook.com/share/1cDbjrn6XP/"
+              href="https://www.facebook.com/CosmoVertex?_rdc=1&_rdr#"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-sm text-white/70 hover:text-white transition-colors"
@@ -432,7 +453,7 @@ export default function Navbar() {
                   Chat on WhatsApp
                 </a>
                 <a
-                  href="https://www.facebook.com/share/1cDbjrn6XP/"
+                  href="https://www.facebook.com/CosmoVertex?_rdc=1&_rdr#"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm text-white/80 hover:text-white hover:bg-white/10 transition-colors"

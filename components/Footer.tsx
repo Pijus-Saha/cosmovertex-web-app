@@ -11,19 +11,23 @@ import {
 } from "lucide-react";
 
 const services = [
-  { label: "Duolingo DET Prep", href: "/services?tab=duolingo" },
-  { label: "EnglishScore C1 CEFR", href: "/services?tab=englishscore" },
-  { label: "EF SET Preparation", href: "/services?tab=efset" },
-  { label: "IELTS / PTE Coaching", href: "/services?tab=ielts-pte" },
+  { label: "Duolingo English Test (DET)", href: "/services?tab=duolingo" },
+  { label: "CEFR C1 Advanced – EnglishScore", href: "/services?tab=englishscore" },
+  { label: "EF SET Certificate Prep", href: "/services?tab=efset" },
+  { label: "IELTS Academic / General", href: "/services?tab=ielts" },
+  { label: "PTE Academic Coaching", href: "/services?tab=pte" },
   { label: "Student Success Gallery", href: "/gallery" },
 ];
 
 const destinations = [
-  { label: "Study in South Korea", href: "/destinations/south-korea" },
-  { label: "Study in Europe", href: "/destinations/europe" },
-  { label: "Study in United Kingdom", href: "/destinations/uk" },
   { label: "Study in United States", href: "/destinations/usa" },
+  { label: "Study in United Kingdom", href: "/destinations/uk" },
+  { label: "Study in Canada", href: "/destinations/canada" },
   { label: "Study in Australia", href: "/destinations/australia" },
+  { label: "Study in New Zealand", href: "/destinations/new-zealand" },
+  { label: "Study in South Korea", href: "/destinations/south-korea" },
+  { label: "Malaysia & Pathway Programs", href: "/destinations/malaysia" },
+  { label: "Study in Europe (Schengen)", href: "/destinations/europe" },
 ];
 
 const offices = [
@@ -32,12 +36,6 @@ const offices = [
     partner: "Sky2Edu / CosmoVertex",
     address: "House #38, Road #02, 1st Floor, Banani, Dhaka - 1213",
     icon: "🏢",
-  },
-  {
-    name: "Mohakhali Branch",
-    partner: "Renaissance Edu Care",
-    address: "House #409, Road #29, Level 5A, Mohakhali DOHS, Dhaka - 1206",
-    icon: "🏫",
   },
 ];
 
@@ -77,13 +75,6 @@ export default function Footer() {
                 +880 1316-318387
               </a>
               <a
-                href="tel:+8801346990025"
-                className="flex items-center gap-2 text-sm hover:text-white transition-colors"
-              >
-                <Phone className="w-3.5 h-3.5 text-[#10b981]" />
-                +880 1346-990025
-              </a>
-              <a
                 href="mailto:info@cosmovertex.com"
                 className="flex items-center gap-2 text-sm hover:text-white transition-colors"
               >
@@ -101,7 +92,7 @@ export default function Footer() {
                 <ExternalLink className="w-3 h-3" />
               </a>
               <a
-                href="https://www.facebook.com/share/1cDbjrn6XP/"
+                href="https://www.facebook.com/CosmoVertex?_rdc=1&_rdr#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-[#1877F2] hover:text-blue-400 transition-colors"
@@ -157,10 +148,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Offices */}
+          {/* Office */}
           <div>
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
-              Our Offices
+              Our Office
             </h3>
             <div className="space-y-5">
               {offices.map((office) => (

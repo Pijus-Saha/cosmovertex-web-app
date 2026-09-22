@@ -251,8 +251,6 @@ export async function POST(request: NextRequest) {
     counselingMode:
       counselingMode === "banani"
         ? "Banani Office (In-Person)"
-        : counselingMode === "mohakhali"
-        ? "Mohakhali DOHS Branch (In-Person)"
         : counselingMode === "online"
         ? "Online Video / Call"
         : counselingMode || "Not Specified",

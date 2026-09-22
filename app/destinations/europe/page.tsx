@@ -5,38 +5,38 @@ import DestinationSimpleLayout, {
 } from "@/components/destination/DestinationSimpleLayout";
 
 export const metadata: Metadata = {
-  title: "Study in Europe — Greece, Lithuania, Slovenia & Malta | COSMOVERTEX",
+  title: "Study in Europe — Lithuania, Slovenia, Greece, Hungary, Sweden, Finland & Italy | COSMOVERTEX",
   description:
-    "Explore affordable European higher education with COSMOVERTEX. Study in Greece, Lithuania, Slovenia, and Malta with tuition from EUR 1,500–4,500/year, 29-country Schengen visa mobility, EnglishScore C1/DET acceptance, and QR-code compliant bank statement support.",
+    "Explore personalized European study-abroad pathways with COSMOVERTEX. Study across Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, and Italy with tuition from EUR 1,500–5,000/year, 29-country Schengen visa mobility, and EnglishScore C1/DET acceptance.",
   alternates: { canonical: "/destinations/europe" },
 };
 
 const europeQuickFacts: QuickFact[] = [
   {
     label: "Average Tuition Fees",
-    value: "€1,500 – €4,500 / yr",
-    subtext: "Among the most budget-friendly European tuition structures.",
+    value: "€1,500 – €5,000 / yr",
+    subtext: "Among the most accessible tuition structures across EU universities.",
     tag: "Budget Friendly",
     icon: "tuition",
   },
   {
     label: "Top Intakes",
     value: "September & February",
-    subtext: "September is the main intake; rolling spring admissions available.",
+    subtext: "September (Fall) is primary; rolling spring and winter admissions available.",
     tag: "Next: Fall Intake",
     icon: "intake",
   },
   {
     label: "Accepted English Tests",
     value: "EnglishScore C1, DET, IELTS",
-    subtext: "Fast-track admission via British Council EnglishScore C1 or Duolingo.",
+    subtext: "Fast-track admission via British Council EnglishScore C1, Duolingo DET, or EF SET.",
     tag: "Flexible English",
     icon: "test",
   },
   {
     label: "Post-Study Work Rights",
     value: "1 – 2 Years Stayback",
-    subtext: "Includes seamless travel across 29 Schengen member states.",
+    subtext: "Graduate job-seeker visas and seamless travel across 29 Schengen member states.",
     tag: "29 Schengen States",
     icon: "work",
   },
@@ -44,34 +44,34 @@ const europeQuickFacts: QuickFact[] = [
 
 const europeHighlights: HighlightItem[] = [
   {
-    title: "Focus on Top Affordable Destinations",
+    title: "Focus on Top European Study Hubs",
     description:
-      "Target high-visa-ratio European hubs including Greece, Lithuania, Slovenia, and Malta with 100% English-taught Bachelor's and Master's curricula.",
-    badge: "EU Member States",
+      "Direct university applications across Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, and Italy with 100% English-taught Bachelor's and Master's degree programs.",
+    badge: "7 Key EU Nations",
   },
   {
-    title: "Schengen Visa & Mobility Benefits",
+    title: "Schengen Visa & Unrestricted Mobility",
     description:
-      "Your student residence permit grants unrestricted travel across 29 Schengen member countries for study, internships, and European travel.",
+      "Your European student residence permit grants visa-free travel and exploration across all 29 Schengen member countries for study, research, and internships.",
     badge: "29 Countries",
+  },
+  {
+    title: "Top Nordic & Historic Mediterranean Institutions",
+    description:
+      "From cutting-edge tech and sustainability hubs in Sweden and Finland to historic universities in Italy, Hungary, Greece, Lithuania, and Slovenia.",
+    badge: "World-Class Unis",
   },
   {
     title: "QR-Code Bank Statement Compliant",
     description:
-      "Full guidance adhering to Bangladesh Bank QR-coded electronic bank solvency certification to guarantee smooth embassy verification.",
+      "Full guidance adhering to Bangladesh Bank QR-coded electronic bank solvency certification to guarantee seamless embassy and VFS verification.",
     badge: "Visa Guaranteed",
   },
   {
-    title: "Student Work Rights & Affordable Living",
+    title: "Part-Time Student Work & Post-Study Visas",
     description:
-      "Work up to 20 hours per week during semesters and full-time during vacations, with average living expenses ranging between €450 and €650 per month.",
-    badge: "20 Hrs/Week",
-  },
-  {
-    title: "Fast English Verification",
-    description:
-      "Direct university acceptance using British Council EnglishScore CEFR C1 or Duolingo English Test (DET) without mandatory IELTS delays.",
-    badge: "No IELTS Required",
+      "Work up to 20–30 hours per week depending on the country, with average student living expenses starting from €450 to €750 per month.",
+    badge: "Work Rights",
   },
 ];
 
@@ -84,11 +84,11 @@ const europeIntakes = [
 export default function EuropePage() {
   return (
     <DestinationSimpleLayout
-      destinationName="Europe"
+      destinationName="Europe (Schengen)"
       countryCode="EU"
       flag="🇪🇺"
       badgeText="Schengen Higher Education"
-      tagline="Pursue globally accredited degrees across Greece, Lithuania, Slovenia, and Malta with low tuition fees, Schengen mobility, and straightforward visa processing."
+      tagline="Pursue globally accredited degrees across Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, and Italy with affordable tuition, Schengen mobility, and comprehensive visa support with COSMOVERTEX."
       quickFacts={europeQuickFacts}
       highlights={europeHighlights}
       intakeOptions={europeIntakes}

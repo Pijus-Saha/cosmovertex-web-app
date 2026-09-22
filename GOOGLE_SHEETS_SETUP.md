@@ -60,11 +60,11 @@ Every time a student clicks **"Confirm My Free Counseling Session"**, a new row 
 | **Phone / WhatsApp** | Verified mobile number |
 | **Email** | Email address (if provided) |
 | **Service Requested** | *Complete Pathway*, *Study Abroad Only*, or *English Test Prep* |
-| **Counseling Mode** | *Banani Office*, *Mohakhali DOHS*, or *Online Video/Call* |
-| **Target Destination** | South Korea, Australia, Europe, UK, USA, etc. |
+| **Counseling Mode** | *Banani Office* or *Online Video/Call* |
+| **Target Destination** | USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia & Pathways, or Europe (Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, Italy) |
 | **Degree Level** | Bachelor's, Master's, Diploma, PhD |
 | **Planned Intake** | Fall / September, Spring / March, Summer, etc. |
-| **English Test** | EnglishScore C1, Duolingo DET, EF SET, IELTS, PTE |
+| **English Test** | Duolingo English Test (DET), CEFR C1 Advanced – EnglishScore, EF SET, IELTS, PTE |
 | **Coaching Format** | Small Cohort Batch, Crash Course, 1-on-1 VIP, etc. |
 | **Academic Background** | HSC, A-Levels, Completed Bachelor's, Working, etc. |
 | **Student Notes** | Dream universities, questions, or specific score goals |

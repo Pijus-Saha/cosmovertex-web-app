@@ -29,19 +29,22 @@ export const metadata: Metadata = {
     template: "%s | COSMOVERTEX",
   },
   description:
-    "COSMOVERTEX — Bangladesh's most trusted English proficiency test preparation center. Expert coaching for Duolingo DET, British Council EnglishScore C1, EF SET, IELTS & PTE. Study abroad consultancy for Europe, South Korea, UK, USA & Australia.",
+    "Personalized study-abroad pathways to the USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia (including Malaysia Pathway Programs), and Europe (Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, Italy). Expert English proficiency coaching for Duolingo English Test (DET), CEFR C1 Advanced – EnglishScore Core Skills Test, EF SET, IELTS, and PTE.",
   keywords: [
     "COSMOVERTEX",
-    "Duolingo DET preparation Bangladesh",
-    "EnglishScore CEFR C1 coaching",
+    "Duolingo English Test DET preparation",
+    "CEFR C1 Advanced EnglishScore Core Skills Test",
     "EF SET preparation Dhaka",
-    "IELTS coaching Banani",
+    "IELTS coaching Bangladesh",
+    "PTE Academic coaching Dhaka",
     "study abroad consultancy Bangladesh",
-    "South Korea university admission Bangladesh",
-    "English proficiency test prep Dhaka",
+    "study in USA Canada UK Australia",
+    "New Zealand student visa Bangladesh",
+    "Malaysia pathway programs",
+    "South Korea university admission",
+    "Europe study visa Lithuania Slovenia Greece Hungary Sweden Finland Italy",
     "Doctor of SEL",
     "Sky2Edu",
-    "Renaissance Edu Care",
   ],
   authors: [{ name: "COSMOVERTEX", url: siteUrl }],
   creator: "COSMOVERTEX",
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
     title:
       "COSMOVERTEX | English Test Prep & Study Abroad Consultancy, Dhaka",
     description:
-      "1,800+ successful English proficiency test results. Expert coaching for Duolingo DET, EnglishScore C1, EF SET, IELTS & PTE. Study in South Korea, Europe, UK, USA, Australia.",
+      "Personalized study-abroad pathways to the USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia (including Malaysia Pathway Programs), and Europe (Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, Italy). Expert coaching for Duolingo English Test (DET), CEFR C1 Advanced – EnglishScore Core Skills Test, EF SET, IELTS, and PTE.",
     images: [
       {
         url: "/og-image.png",
@@ -67,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "COSMOVERTEX — English Test Prep & Study Abroad",
     description:
-      "1,800+ successful tests. Expert Duolingo DET, EnglishScore C1, EF SET, IELTS coaching in Dhaka.",
+      "Personalized study-abroad pathways to USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia & Europe. Coaching for DET, CEFR C1 EnglishScore, EF SET, IELTS & PTE.",
   },
   alternates: {
     canonical: siteUrl,
@@ -89,12 +92,12 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "COSMOVERTEX",
-  alternateName: "Doctor of SEL | Sky2Edu | Renaissance Edu Care",
+  alternateName: "Doctor of SEL | Sky2Edu",
   url: siteUrl,
-  telephone: ["+8801316318387", "+8801346990025"],
+  telephone: "+8801316318387",
   email: "info@cosmovertex.com",
   description:
-    "English proficiency test preparation (Duolingo DET, EnglishScore C1, EF SET, IELTS, PTE) and study abroad consultancy for Europe, South Korea, UK, USA, and Australia.",
+    "Personalized study-abroad pathways to the USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia, and Europe (Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, Italy), plus Malaysia Pathway Programs leading to USA, UK, Canada, and Australia. Expert coaching for Duolingo English Test (DET), CEFR C1 Advanced – EnglishScore Core Skills Test, EF SET, IELTS, and PTE.",
   areaServed: "Bangladesh",
   foundingDate: "2020",
   location: [
@@ -109,21 +112,10 @@ const localBusinessSchema = {
         addressCountry: "BD",
       },
     },
-    {
-      "@type": "Place",
-      name: "Mohakhali Branch (Renaissance Edu Care)",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "House #409, Road #29, Level 5A",
-        addressLocality: "Mohakhali DOHS, Dhaka",
-        postalCode: "1206",
-        addressCountry: "BD",
-      },
-    },
   ],
   sameAs: [
     "https://wa.me/8801316318387",
-    "https://www.facebook.com/share/1cDbjrn6XP/",
+    "https://www.facebook.com/CosmoVertex?_rdc=1&_rdr#",
   ],
 };
 

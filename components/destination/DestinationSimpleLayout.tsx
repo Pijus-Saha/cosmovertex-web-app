@@ -42,6 +42,7 @@ interface DestinationSimpleLayoutProps {
   highlights: HighlightItem[];
   intakeOptions?: string[];
   defaultIntake?: string;
+  children?: React.ReactNode;
 }
 
 const getFactIcon = (type?: string) => {
@@ -66,6 +67,7 @@ export default function DestinationSimpleLayout({
   badgeText = "Study Abroad Destination",
   quickFacts,
   highlights,
+  children,
 }: DestinationSimpleLayoutProps) {
   const whatsappPhone = "01316318387";
   const whatsappUrl = `https://wa.me/8801316318387?text=${encodeURIComponent(
@@ -245,6 +247,9 @@ export default function DestinationSimpleLayout({
           </div>
         </div>
       </section>
+
+      {/* Optional custom content (e.g. Visa Success Videos) */}
+      {children}
 
       {/* 4. Counseling Lead Capture CTA Banner */}
       <section id="counseling-lead-cta" className="py-16 sm:py-20 bg-slate-100 dark:bg-slate-950">

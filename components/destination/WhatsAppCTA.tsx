@@ -53,12 +53,12 @@ export default function WhatsAppCTA({
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 text-xs text-white/70">
                 <span className="flex items-center gap-1.5">
                   <Phone className="w-3.5 h-3.5 text-emerald-400" />
-                  +880 1316-318387 / +880 1346-990025
+                  +880 1316-318387
                 </span>
                 <span>•</span>
                 <span className="flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-amber-400" />
-                  Banani & Mohakhali DOHS, Dhaka
+                  Banani, Dhaka
                 </span>
               </div>
             </div>

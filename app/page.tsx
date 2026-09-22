@@ -23,7 +23,7 @@ import RoadmapTeaser from "@/components/RoadmapTeaser";
 export const metadata: Metadata = {
   title: "COSMOVERTEX — English Test Prep & Study Abroad Consultancy Dhaka",
   description:
-    "COSMOVERTEX — Bangladesh's #1 English proficiency test preparation center. 1,800+ successful EnglishScore, Duolingo DET, EF SET, IELTS results. Study abroad consultancy for South Korea, Europe, UK, USA & Australia. Free counseling available.",
+    "COSMOVERTEX — Personalized study-abroad pathways to the USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia (including Malaysia Pathway Programs), and Europe (Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, Italy). Expert coaching for Duolingo English Test (DET), CEFR C1 Advanced – EnglishScore Core Skills Test, EF SET, IELTS, and PTE.",
   alternates: { canonical: "/" },
 };
 
@@ -31,24 +31,24 @@ const services = [
   {
     id: "duolingo",
     icon: "🎯",
-    name: "Duolingo English Test",
+    name: "Duolingo English Test (DET)",
     shortName: "DET",
-    badge: "Most Popular",
+    badge: "110+ Score Focus",
     badgeColor: "bg-amber-100 text-amber-700",
     description:
-      "Targeted preparation for the Duolingo English Test. Mock tests, section-wise strategies, and score improvement techniques.",
-    features: ["Adaptive practice sessions", "Mock DET simulations", "Score analysis", "Booking assistance"],
+      "Targeted preparation for the Duolingo English Test. Adaptive simulations, section-wise strategies, and score improvement techniques.",
+    features: ["Adaptive question mastery", "Mock DET simulations", "Speaking & literacy analysis", "Booking assistance"],
     color: "border-t-amber-400",
   },
   {
     id: "englishscore",
     icon: "🏅",
-    name: "British Council EnglishScore",
-    shortName: "C1 CEFR",
+    name: "CEFR C1 Advanced – EnglishScore Core Skills Test",
+    shortName: "EnglishScore C1",
     badge: "1,800+ Results",
     badgeColor: "bg-emerald-100 text-emerald-700",
     description:
-      "Bangladesh's most experienced EnglishScore prep. CEFR C1 Advanced level coaching with proven methodology.",
+      "Bangladesh's most experienced EnglishScore prep. British Council CEFR C1 Advanced coaching with verified track records.",
     features: ["CEFR framework mastery", "Speaking & pronunciation", "Grammar deep-dive", "Official score booking"],
     color: "border-t-[#059669]",
   },
@@ -57,62 +57,95 @@ const services = [
     icon: "🌏",
     name: "EF SET Certificate",
     shortName: "EF SET",
-    badge: "South Korea Ready",
+    badge: "South Korea & EU Ready",
     badgeColor: "bg-blue-100 text-blue-700",
     description:
-      "EF SET preparation accepted by top South Korean universities. Score C1/C2 level for university admission.",
-    features: ["University-specific score targets", "Reading & listening focus", "Timed practice tests", "Certificate strategy"],
+      "EF SET preparation accepted by top South Korean universities and European institutions. Score C1/C2 level for university admission.",
+    features: ["University-specific score targets", "Reading & listening speed", "Timed practice tests", "Certificate strategy"],
     color: "border-t-blue-400",
   },
   {
-    id: "ielts-pte",
+    id: "ielts",
     icon: "📚",
-    name: "IELTS & PTE Academic",
-    shortName: "IELTS/PTE",
-    badge: "UK & Australia",
+    name: "IELTS Academic",
+    shortName: "IELTS",
+    badge: "Band 7.0+ Target",
     badgeColor: "bg-purple-100 text-purple-700",
     description:
-      "Comprehensive IELTS and PTE coaching for university admissions in UK, Australia, and beyond.",
-    features: ["4-skill integrated coaching", "Band/score targeting", "Writing correction", "Speaking practice"],
+      "Rigorous 4-skill preparation for IELTS Academic. Ideal for top universities in the UK, Australia, Canada, and the USA.",
+    features: ["4-skill integrated coaching", "Band 7.0+ targeting", "Task 1 & 2 writing correction", "Speaking mock interviews"],
     color: "border-t-purple-400",
+  },
+  {
+    id: "pte",
+    icon: "⚡",
+    name: "PTE Academic",
+    shortName: "PTE",
+    badge: "Fast AI Scoring",
+    badgeColor: "bg-rose-100 text-rose-700",
+    description:
+      "Comprehensive PTE Academic coaching with AI scoring algorithms, speaking templates, and fast-turnaround result strategies.",
+    features: ["PTE AI scoring tricks", "Fluency & pronunciation drill", "Full computer mock tests", "Australia/UK visa ready"],
+    color: "border-t-rose-400",
   },
 ];
 
 const destinations = [
   {
-    flag: "🇰🇷",
-    country: "South Korea",
-    tagline: "SNU, Yonsei, Korea University & more top-ranked universities. EF SET accepted.",
-    highlight: "EF SET Accepted",
-    href: "/destinations/south-korea",
-  },
-  {
-    flag: "🇪🇺",
-    country: "Europe",
-    tagline: "Greece, Lithuania, Slovenia, Malta — affordable quality education in Europe.",
-    highlight: "Schengen Access",
-    href: "/destinations/europe",
+    flag: "🇺🇸",
+    country: "United States",
+    tagline: "Top universities, STEM OPT up to 3 years, and merit scholarships. DET & IELTS accepted.",
+    highlight: "STEM OPT / DET",
+    href: "/destinations/usa",
   },
   {
     flag: "🇬🇧",
     country: "United Kingdom",
-    tagline: "Russell Group and top UK universities. IELTS and PTE pathways available.",
-    highlight: "IELTS / PTE",
+    tagline: "Russell Group and top UK universities with 2-year Graduate Route PSW. Fast admissions.",
+    highlight: "1-Yr Masters / PSW",
     href: "/destinations/uk",
   },
   {
-    flag: "🇺🇸",
-    country: "United States",
-    tagline: "Undergraduate and graduate programs across US universities.",
-    highlight: "DET / IELTS",
-    href: "/destinations/usa",
+    flag: "🇨🇦",
+    country: "Canada",
+    tagline: "Top DLI colleges and universities, up to 3-year PGWP, and clear permanent residency pathways.",
+    highlight: "PGWP / PR Pathways",
+    href: "/destinations/canada",
   },
   {
     flag: "🇦🇺",
     country: "Australia",
-    tagline: "Group of Eight and regional universities with PTE and IELTS pathways.",
-    highlight: "PTE / IELTS",
+    tagline: "Group of Eight and regional universities with extended post-study work rights and PTE/IELTS.",
+    highlight: "PTE / Regional PSW",
     href: "/destinations/australia",
+  },
+  {
+    flag: "🇳🇿",
+    country: "New Zealand",
+    tagline: "Globally ranked institutions, up to 3 years Post-Study Work Visa, and Straight-to-Residence pathways.",
+    highlight: "3-Yr Post-Study Work",
+    href: "/destinations/new-zealand",
+  },
+  {
+    flag: "🇰🇷",
+    country: "South Korea",
+    tagline: "SKY universities (SNU, Yonsei, KU) with affordable tuition ($3k–$8k/yr) and EF SET acceptance.",
+    highlight: "EF SET / Affordable",
+    href: "/destinations/south-korea",
+  },
+  {
+    flag: "🇲🇾",
+    country: "Malaysia & Pathways",
+    tagline: "Direct degrees & Malaysia Pathway Programs leading to USA, UK, Canada, and Australia!",
+    highlight: "US/UK/CA/AU Transfer",
+    href: "/destinations/malaysia",
+  },
+  {
+    flag: "🇪🇺",
+    country: "Europe (Schengen)",
+    tagline: "Lithuania, Slovenia, Greece, Hungary, Sweden, Finland & Italy with 29-nation Schengen mobility.",
+    highlight: "Lithuania to Sweden",
+    href: "/destinations/europe",
   },
 ];
 
@@ -123,13 +156,6 @@ const offices = [
     address: "House #38, Road #02, 1st Floor, Banani, Dhaka - 1213",
     icon: "🏢",
     phone: "+880 1316-318387",
-  },
-  {
-    name: "Mohakhali DOHS Branch",
-    partner: "Renaissance Edu Care",
-    address: "House #409, Road #29, Level 5A, Mohakhali DOHS, Dhaka - 1206",
-    icon: "🏫",
-    phone: "+880 1346-990025",
   },
 ];
 
@@ -173,11 +199,12 @@ export default function HomePage() {
 
             {/* Sub-headline */}
             <p className="text-xl text-white/70 leading-relaxed mb-4 max-w-2xl">
+              Personalized study-abroad pathways to the{" "}
+              <strong className="text-white">USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia</strong> (including Malaysia Pathway Programs), and{" "}
+              <strong className="text-white">Europe</strong> (Lithuania, Slovenia, Greece, Hungary, Sweden, Finland &amp; Italy).
               Expert coaching for <strong className="text-white">Duolingo DET</strong>,{" "}
-              <strong className="text-white">EnglishScore C1</strong>,{" "}
-              <strong className="text-white">EF SET</strong>, IELTS & PTE.
-              Personalized pathways to{" "}
-              <strong className="text-white">South Korea, Europe, UK, USA & Australia</strong>.
+              <strong className="text-white">CEFR C1 Advanced – EnglishScore</strong>,{" "}
+              <strong className="text-white">EF SET</strong>, <strong className="text-white">IELTS</strong>, and <strong className="text-white">PTE</strong>.
             </p>
 
             {/* Trust signal */}
@@ -235,7 +262,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
             {services.map((service, i) => (
               <div
                 key={service.id}
@@ -298,12 +325,12 @@ export default function HomePage() {
               Where Will You Study?
             </h2>
             <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-              From South Korean top universities to European campuses — we guide
-              you every step of the way.
+              Personalized pathways to the USA, UK, Canada, Australia, New Zealand,
+              South Korea, Malaysia (including Malaysia Pathway Programs), and Europe — guided every step of the way.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {destinations.map((dest, i) => (
               <DestinationCard key={dest.country} {...dest} delay={i * 0.1} />
             ))}
@@ -441,10 +468,10 @@ export default function HomePage() {
               Find Us
             </div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#0A2342] dark:text-slate-100">
-              Visit Our Offices
+              Visit Our Office
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="max-w-xl mx-auto">
             {offices.map((office) => (
               <div
                 key={office.name}

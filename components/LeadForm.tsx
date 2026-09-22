@@ -27,7 +27,7 @@ import {
 import { normalizeBdPhoneNumber } from "@/lib/utils";
 
 export type ServiceType = "all_in_one" | "study_abroad" | "test_prep";
-export type CounselingMode = "banani" | "mohakhali" | "online";
+export type CounselingMode = "banani" | "online";
 
 const leadSchema = z
   .object({
@@ -55,7 +55,7 @@ const leadSchema = z
     targetIntake: z.string().optional(),
     preferredTest: z.string().optional(),
     coachingFormat: z.string().optional(),
-    counselingMode: z.enum(["banani", "mohakhali", "online"], {
+    counselingMode: z.enum(["banani", "online"], {
       message: "Please select how you'd like to consult with our mentors",
     }),
     academicBackground: z.string().optional(),
@@ -90,27 +90,30 @@ interface LeadFormProps {
 
 // Destinations supported by COSMOVERTEX
 const destinationOptions = [
-  { id: "South Korea", name: "South Korea", icon: "🇰🇷", badge: "SKY Univs • Low Tuition" },
-  { id: "Australia", name: "Australia", icon: "🇦🇺", badge: "Fusion College Partner • PSW" },
-  { id: "Europe", name: "Europe / Schengen", icon: "🇪🇺", badge: "Greece, Malta, Lithuania" },
+  { id: "USA", name: "United States", icon: "🇺🇸", badge: "STEM OPT • Scholarships" },
   { id: "UK", name: "United Kingdom", icon: "🇬🇧", badge: "Russell Group • 2-Yr PSW" },
-  { id: "USA", name: "United States", icon: "🇺🇸", badge: "STEM OPT • Top Unis" },
+  { id: "Canada", name: "Canada", icon: "🇨🇦", badge: "Top DLIs • 3-Yr PGWP" },
+  { id: "Australia", name: "Australia", icon: "🇦🇺", badge: "Go8 & Regional • PSW" },
+  { id: "New Zealand", name: "New Zealand", icon: "🇳🇿", badge: "Green List • Top 3% Unis" },
+  { id: "South Korea", name: "South Korea", icon: "🇰🇷", badge: "SKY Univs • Low Tuition" },
+  { id: "Malaysia", name: "Malaysia & Pathways", icon: "🇲🇾", badge: "USA/UK/CA/AU Transfer" },
+  { id: "Europe", name: "Europe (Schengen)", icon: "🇪🇺", badge: "LT, SI, GR, HU, SE, FI, IT" },
   { id: "Undecided", name: "Need Counselor Advice", icon: "🧭", badge: "Profile Evaluation" },
 ];
 
 // Tests coached by COSMOVERTEX
 const testOptions = [
   {
-    id: "EnglishScore C1",
-    name: "British Council EnglishScore",
-    badge: "1,800+ Results • C1 Advanced",
-    icon: "🏅",
-  },
-  {
     id: "DET",
     name: "Duolingo English Test (DET)",
     badge: "110+ Target • Fast-Track",
     icon: "🎯",
+  },
+  {
+    id: "EnglishScore C1",
+    name: "CEFR C1 – EnglishScore Core Skills",
+    badge: "1,800+ Results • British Council",
+    icon: "🏅",
   },
   {
     id: "EF SET",
@@ -127,7 +130,7 @@ const testOptions = [
   {
     id: "PTE",
     name: "PTE Academic",
-    badge: "Fast AI Results",
+    badge: "Fast AI Results • Pearson",
     icon: "⚡",
   },
   {
@@ -176,13 +179,6 @@ const counselingModes = [
     subtitle: "House #38, Road #02, 1st Floor, Banani",
     icon: Building2,
     badge: "Dhaka Central",
-  },
-  {
-    id: "mohakhali" as const,
-    title: "Mohakhali DOHS (In-Person)",
-    subtitle: "House #409, Road #29, Level 5A, Mohakhali DOHS",
-    icon: MapPin,
-    badge: "DOHS Branch",
   },
   {
     id: "online" as const,
@@ -274,7 +270,6 @@ export default function LeadForm({
     if (lead.serviceType === "test_prep") serviceText = "English Proficiency Test Preparation";
 
     let modeText = "Banani Office";
-    if (lead.counselingMode === "mohakhali") modeText = "Mohakhali DOHS Branch";
     if (lead.counselingMode === "online") modeText = "Online Video/Call";
 
     let detailsPart = "";
@@ -413,8 +408,6 @@ Please confirm my counseling appointment schedule. Thank you!`;
                 <span className="font-semibold text-purple-600 dark:text-purple-400">
                   {submittedLead.counselingMode === "banani"
                     ? "🏢 Banani Office"
-                    : submittedLead.counselingMode === "mohakhali"
-                    ? "🏫 Mohakhali DOHS Branch"
                     : "🌐 Online Video/Call"}
                 </span>
               </div>
@@ -773,7 +766,7 @@ Please confirm my counseling appointment schedule. Thank you!`;
               <div
                 role="radiogroup"
                 aria-label="Select Preferred Counseling Mode"
-                className="grid grid-cols-1 sm:grid-cols-3 gap-3"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-3"
               >
                 {counselingModes.map((mode) => {
                   const isSelected = selectedMode === mode.id;

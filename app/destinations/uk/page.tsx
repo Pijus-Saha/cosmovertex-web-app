@@ -81,6 +81,8 @@ const ukIntakes = [
   "Summer / May Intake",
 ];
 
+import VisaSuccessVideos from "@/components/VisaSuccessVideos";
+
 export default function UKPage() {
   return (
     <DestinationSimpleLayout
@@ -93,6 +95,8 @@ export default function UKPage() {
       highlights={ukHighlights}
       intakeOptions={ukIntakes}
       defaultIntake="Autumn / September Intake"
-    />
+    >
+      <VisaSuccessVideos filterDestination="United Kingdom" compact />
+    </DestinationSimpleLayout>
   );
 }

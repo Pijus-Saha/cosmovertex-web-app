@@ -7,7 +7,7 @@
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-13.2-ff0055?logo=framer)](https://www.framer.com/motion/)
 [![Resend](https://img.shields.io/badge/Resend-Email_API-black?logo=resend)](https://resend.com/)
 
-Bangladesh's premier English proficiency test preparation center and study abroad consultancy, based in Dhaka. Official web platform for **COSMOVERTEX** (also established under **Doctor of SEL**, **Sky2Edu**, & **Renaissance Edu Care**).
+Bangladesh's premier English proficiency test preparation center and study abroad consultancy, based in Dhaka. Official web platform for **COSMOVERTEX** (also established under **Doctor of SEL** & **Sky2Edu**).
 
 🌐 **Official Website**: [https://cosmovertex.edu.bd](https://cosmovertex.edu.bd)
 
@@ -18,16 +18,20 @@ Bangladesh's premier English proficiency test preparation center and study abroa
 COSMOVERTEX empowers Bangladeshi students to achieve their international education and language certification goals with personalized mentorship, verified track records, and direct institutional connections.
 
 - **Certified English Test Preparation**:
-  - **British Council EnglishScore** — Official partner & coaching for verified CEFR C1 Advanced certificates (achievements up to 599/600).
   - **Duolingo English Test (DET)** — Comprehensive prep for 110+ target scores accepted by 5,000+ universities worldwide.
-  - **EF SET (Standard English Test)** — Fast-track CEFR certification accepted across European and South Korean universities.
-  - **IELTS & PTE Academic** — Targeted band 7.0+ coaching and computer-adaptive test strategies.
+  - **CEFR C1 Advanced – EnglishScore Core Skills Test** — Official British Council framework coaching for verified C1 Advanced certificates (achievements up to 599/600).
+  - **EF SET (Standard English Test)** — Fast-track CEFR certification accepted across South Korean and European universities.
+  - **IELTS Academic & General** — Targeted band 7.0+ coaching and module-wise strategies.
+  - **PTE Academic** — Computer-delivered exam strategies and AI scoring mastery for Australia, UK, Canada, and New Zealand.
 - **Global Study Abroad Consultancy**:
-  - **Australia 🇦🇺** — High visa approval rates, direct pathways, and official delegation partnerships (including **Fusion College, Sydney**).
-  - **South Korea 🇰🇷** — SKY University admissions (Seoul National, Yonsei, Korea University), affordable tuition ($3,000–$8,000/yr), March & September intakes, D-10 & E-7 work visas.
-  - **Europe & Schengen 🇪🇺** — High visa success across Greece, Lithuania, Slovenia, Malta, and Germany with Schengen mobility.
-  - **United Kingdom 🇬🇧** — Russell Group applications, Foundation/Direct entry, 2-year Graduate Route Post-Study Work (PSW).
   - **United States 🇺🇸** — Top universities, F-1 visa preparation, merit scholarships, and 3-year STEM OPT extensions.
+  - **United Kingdom 🇬🇧** — Russell Group applications, Foundation/Direct entry, 2-year Graduate Route Post-Study Work (PSW).
+  - **Canada 🇨🇦** — Top DLI colleges and universities, paid co-op internships, up to 3 years PGWP, and clear PR pathways.
+  - **Australia 🇦🇺** — High visa approval rates, direct pathways, and official delegation partnerships (including **Fusion College, Sydney**).
+  - **New Zealand 🇳🇿** — All 8 public universities in the global top 3%, up to 3-year Post-Study Work Visa, and Straight-to-Residence Green List pathways.
+  - **South Korea 🇰🇷** — SKY University admissions (Seoul National, Yonsei, Korea University), affordable tuition ($3,000–$8,000/yr), March & September intakes, D-10 & E-7 work visas.
+  - **Malaysia & Malaysia Pathway Programs 🇲🇾** — High-quality degrees at foreign branch campuses (Monash, Nottingham, Curtin) plus **Malaysia Pathway Programs** transferring seamlessly to the USA, UK, Canada, and Australia.
+  - **Europe & Schengen 🇪🇺** — High visa success across Lithuania, Slovenia, Greece, Hungary, Sweden, Finland, and Italy with 29-country Schengen mobility.
 - **Key Metrics**:
   - **1,800+** successful test results since 2020
   - **45+** partner universities worldwide
@@ -36,16 +40,15 @@ COSMOVERTEX empowers Bangladeshi students to achieve their international educati
 
 ---
 
-## 🏫 Office Locations & Contact
+## 🏫 Office Location & Contact
 
 | Branch | Address | Phone | Direct Line |
 |---|---|---|---|
 | **Banani** *(Sky2Edu / CosmoVertex)* | House #38, Road #02, 1st Floor, Banani, Dhaka - 1213 | +880 1316-318387 | Mon–Sat, 10 AM – 7 PM |
-| **Mohakhali DOHS** *(Renaissance Edu Care)* | House #409, Road #29, Level 5A, Mohakhali DOHS, Dhaka - 1206 | +880 1346-990025 | Mon–Sat, 10 AM – 7 PM |
 
 - 📧 **Email**: [info@cosmovertex.com](mailto:info@cosmovertex.com)
 - 💬 **WhatsApp**: [+880 1316-318387](https://wa.me/8801316318387)
-- 📘 **Facebook**: [facebook.com/cosmovertex](https://www.facebook.com/share/1cDbjrn6XP/)
+- 📘 **Facebook**: [facebook.com/CosmoVertex](https://www.facebook.com/CosmoVertex?_rdc=1&_rdr#)
 
 ---
 

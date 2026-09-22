@@ -36,6 +36,20 @@ export interface SuccessItem {
 
 const SUCCESS_ITEMS: SuccessItem[] = [
   {
+    id: "success-mehedi-hasan-malaysia",
+    title: "Study in Malaysia Visa Success Story: Mehedi Hasan — University of Wollongong Malaysia",
+    studentName: "Mehedi Hasan",
+    category: "Visa Success",
+    badgeText: "Malaysia Visa Success",
+    date: "Verified Visa",
+    destinationOrProgram: "University of Wollongong Malaysia (UOW Malaysia KDU)",
+    scoreOrVisaDetails: "100% Visa Guarantee Without IELTS • Pathway to Australia, UK & Europe",
+    description:
+      "Another successful step toward a brighter global future! Congratulations to Mehedi Hasan on receiving his student visa for the University of Wollongong Malaysia (UOW Malaysia KDU). Secured 100% visa guarantee without IELTS through COSMOVERTEX end-to-end documentation guidance and expert counseling, establishing a world-class study pathway to Australia, the UK, and Europe.",
+    imageUrl: "/gallery/mehedi-hasan-malaysia-visa.jpg",
+    highlightMetric: "UOW Malaysia 🇲🇾",
+  },
+  {
     id: "success-fusion-college-australia",
     title: "Exclusive Meet-Up: Dr. Binod Shrestha, Founder & CEO of Fusion College, Sydney 🇦🇺",
     studentName: "Dr. Binod Shrestha (Fusion College, Sydney 🇦🇺)",
@@ -123,6 +137,7 @@ const SUCCESS_ITEMS: SuccessItem[] = [
 
 const CATEGORIES = [
   "All",
+  "Visa Success",
   "Study in Australia",
   "CEFR C1 Advanced",
 ] as const;

@@ -14,11 +14,25 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Contact COSMOVERTEX — Book Free Counseling",
   description:
-    "Book a free English proficiency counseling session with COSMOVERTEX. Contact us via WhatsApp, phone, or email. Two offices in Banani and Mohakhali DOHS, Dhaka.",
+    "Book a free counseling session with COSMOVERTEX. Personalized study-abroad pathways to USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia (including Malaysia Pathway Programs), and Europe. Expert coaching for DET, CEFR C1 Advanced EnglishScore, EF SET, IELTS, and PTE.",
   alternates: { canonical: "/contact" },
 };
 
-const offices = [
+interface OfficeLocation {
+  id: string;
+  name: string;
+  partner: string;
+  address: string;
+  phone: string;
+  phone2?: string | null;
+  email: string;
+  whatsappMsg: string;
+  hours: string;
+  icon: string;
+  mapQuery: string;
+}
+
+const offices: OfficeLocation[] = [
   {
     id: "banani",
     name: "Banani Office",
@@ -31,19 +45,6 @@ const offices = [
     hours: "Sat–Thu: 10am – 8pm",
     icon: "🏢",
     mapQuery: "Banani+Road+2+Dhaka",
-  },
-  {
-    id: "mohakhali",
-    name: "Mohakhali DOHS Branch",
-    partner: "Renaissance Edu Care",
-    address: "House #409, Road #29, Level 5A, Mohakhali DOHS, Dhaka - 1206",
-    phone: "+880 1346-990025",
-    phone2: "+880 1316-318387",
-    email: "info@cosmovertex.com",
-    whatsappMsg: "Hello, I'd like to visit the Mohakhali DOHS office.",
-    hours: "Sat–Thu: 10am – 7pm",
-    icon: "🏫",
-    mapQuery: "Mohakhali+DOHS+Road+29+Dhaka",
   },
 ];
 
@@ -66,9 +67,7 @@ export default function ContactPage() {
             <span className="text-gradient-emerald">Counseling Session</span>
           </h1>
           <p className="text-white/75 text-xl max-w-2xl leading-relaxed">
-            Personalized guidance for <strong>English Proficiency Test Prep</strong>,{" "}
-            <strong>Study Abroad Admissions</strong>, and <strong>Visa Processing</strong>.
-            Visit us in <strong>Banani</strong>, <strong>Mohakhali DOHS</strong>, or connect <strong>Online</strong>.
+            Personalized study-abroad pathways to the <strong>USA, UK, Canada, Australia, New Zealand, South Korea, Malaysia</strong> (including <strong>Malaysia Pathway Programs</strong>), and <strong>Europe</strong> (Lithuania, Slovenia, Greece, Hungary, Sweden, Finland &amp; Italy). Expert coaching for <strong>Duolingo DET</strong>, <strong>CEFR C1 Advanced – EnglishScore Core Skills Test</strong>, <strong>EF SET</strong>, <strong>IELTS</strong>, and <strong>PTE</strong>.
           </p>
         </div>
       </section>
@@ -123,22 +122,6 @@ export default function ContactPage() {
                     <ExternalLink className="w-4 h-4 text-slate-300 group-hover:text-[#059669] transition-colors" />
                   </a>
 
-                  {/* WhatsApp — Secondary */}
-                  <a
-                    id="contact-whatsapp-secondary"
-                    href="https://wa.me/8801346990025"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-100 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors group"
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-600 flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-slate-500" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="font-semibold text-[#0A2342] dark:text-slate-100 text-sm">Secondary Line</p>
-                      <p className="text-slate-600 dark:text-slate-400">+880 1346-990025</p>
-                    </div>
-                  </a>
 
                   {/* Email */}
                   <a
@@ -158,7 +141,7 @@ export default function ContactPage() {
                   {/* Facebook */}
                   <a
                     id="contact-facebook"
-                    href="https://www.facebook.com/share/1cDbjrn6XP/"
+                    href="https://www.facebook.com/CosmoVertex?_rdc=1&_rdr#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 rounded-xl bg-[#1877F2]/10 border border-[#1877F2]/20 hover:bg-[#1877F2]/20 transition-colors group"
@@ -222,13 +205,13 @@ export default function ContactPage() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 text-[#059669] font-semibold text-sm uppercase tracking-wider mb-3">
               <MapPin className="w-4 h-4" />
-              Our Offices
+              Our Office
             </div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#0A2342] dark:text-slate-100">
               Visit Us in Person
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="max-w-xl mx-auto">
             {offices.map((office) => (
               <div
                 key={office.id}

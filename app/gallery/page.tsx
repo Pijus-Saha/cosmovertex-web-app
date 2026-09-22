@@ -10,10 +10,9 @@ import {
   ShieldCheck,
   Sparkles,
   Users,
-  PlayCircle,
 } from "lucide-react";
-import VideoPlayer from "@/components/VideoPlayer";
 import SuccessGallery from "@/components/SuccessGallery";
+import VisaSuccessVideos from "@/components/VisaSuccessVideos";
 
 export const metadata: Metadata = {
   title: "Student Success Stories & Proof of Excellence — COSMOVERTEX",
@@ -128,28 +127,10 @@ export default function GalleryPage() {
       {/* Section divider line */}
       <div className="h-px bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent" />
 
-      {/* ── Video Showcase Section ──────────────────────── */}
-      <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/60 dark:to-slate-900">
-        {/* Section label */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-slate-200 dark:to-slate-700" />
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <PlayCircle className="w-3.5 h-3.5 text-emerald-500" />
-              Official Promotional Video
-            </div>
-            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-slate-200 dark:to-slate-700" />
-          </div>
-        </div>
-        <VideoPlayer
-          videoId="https://drive.google.com/file/d/1j-dp0gIaJ-G0BvI_X8SIiaETaXfwHWih/view?usp=sharing"
-          title="Watch the COSMOVERTEX Journey"
-          subtitle="Discover how our structured diagnostic assessments, small batches, and visa documentation audit prepare students for guaranteed success."
-          badge="COSMOVERTEX Promotional Video"
-        />
-      </section>
+      {/* ── Visa Success Video Gallery Section ──────────────── */}
+      <VisaSuccessVideos />
 
-      {/* Section divider */}
+      {/* Section divider line */}
       <div className="h-px bg-gradient-to-r from-transparent via-slate-300/60 dark:via-slate-700/60 to-transparent" />
 
       {/* ── Photo Gallery Grid Section ──────────────────── */}
@@ -194,7 +175,7 @@ export default function GalleryPage() {
           </h2>
 
           <p className="text-white/65 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
-            Meet our senior mentors at our Banani or Mohakhali DOHS branches for a
+            Meet our senior mentors at our Banani office for a
             free test assessment, university shortlisting, and roadmap planning.
           </p>
 
@@ -220,7 +201,7 @@ export default function GalleryPage() {
 
           <p className="mt-8 text-xs text-white/40 flex items-center justify-center gap-2">
             <Phone className="w-3.5 h-3.5 text-emerald-400" />
-            Emergency Hotline: +880 1316-318387 | +880 1346-990025
+            Emergency Hotline: +880 1316-318387
           </p>
         </div>
       </section>

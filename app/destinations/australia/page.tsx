@@ -81,6 +81,8 @@ const australiaIntakes = [
   "Summer / November Intake",
 ];
 
+import VisaSuccessVideos from "@/components/VisaSuccessVideos";
+
 export default function AustraliaPage() {
   return (
     <DestinationSimpleLayout
@@ -93,6 +95,8 @@ export default function AustraliaPage() {
       highlights={australiaHighlights}
       intakeOptions={australiaIntakes}
       defaultIntake="Semester 1 (February Intake)"
-    />
+    >
+      <VisaSuccessVideos filterDestination="Australia" compact />
+    </DestinationSimpleLayout>
   );
 }
