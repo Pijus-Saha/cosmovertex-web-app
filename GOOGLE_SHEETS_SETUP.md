@@ -73,3 +73,37 @@ Every time a student clicks **"Confirm My Free Counseling Session"**, a new row 
 | **Counselor Remarks** | Blank cell ready for notes during/after consultation |
 
 The spreadsheet header will be automatically generated with styling (Navy brand color `#0A2342`, white bold text, and a frozen header row).
+
+---
+
+## 📧 Instant Email Notifications
+
+Whenever a lead submits the counseling form, an instant email alert is dispatched:
+
+### Method 1: Automatic via Google Apps Script (Zero-Config, Free)
+The updated `scripts/google-sheet-counseling-script.gs` now includes built-in email alerts using `MailApp.sendEmail()`.
+- Alerts are sent directly to the email configured in `.env.local` (`NOTIFICATION_EMAIL=info@cosmovertex.com`).
+- The email includes student details, clickable **"💬 Open WhatsApp Chat"**, and **"📊 View in Google Sheet"**.
+
+**How to enable in an existing Google Apps Script deployment**:
+1. Open your Google Sheet > **Extensions** > **Apps Script**.
+2. Replace the script code with the updated [`scripts/google-sheet-counseling-script.gs`](file:///e:/DOS/cosmovertex/scripts/google-sheet-counseling-script.gs).
+3. Click **Save** (💾).
+4. Click **Deploy** (top right) > **Manage deployments**.
+5. Click the **Pencil icon** (✏️ Edit) next to your active deployment.
+6. Under **Version**, choose **New version**.
+7. Click **Deploy**. (Grant Gmail send permissions if prompted).
+
+---
+
+### Method 2: Enterprise Transactional via Resend (Optional)
+If you prefer transactional email delivery directly from Next.js with open/click tracking:
+1. Sign up for free at [resend.com](https://resend.com).
+2. Generate an API Key.
+3. Add to `.env.local`:
+   ```bash
+   RESEND_API_KEY=re_your_api_key_here
+   NOTIFICATION_EMAIL=info@cosmovertex.com
+   ```
+4. Submissions will automatically send branded HTML lead emails via Resend.
+

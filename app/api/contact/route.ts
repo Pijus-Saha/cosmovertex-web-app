@@ -265,6 +265,7 @@ export async function POST(request: NextRequest) {
     notes: notes || "",
     leadStatus: "New Lead",
     clientIp: ip,
+    notificationEmail,
   };
 
   const sheetResult = await syncLeadToGoogleSheet(sheetPayload);

@@ -14,6 +14,7 @@ export interface GoogleSheetLeadPayload {
   notes: string;
   leadStatus?: string;
   clientIp?: string;
+  notificationEmail?: string;
 }
 
 /**
