@@ -103,7 +103,7 @@ const localBusinessSchema = {
   location: [
     {
       "@type": "Place",
-      name: "Banani Office (Sky2Edu / CosmoVertex)",
+      name: "Banani Office (COSMOVERTEX INTERNATIONAL CONSULTANCY)",
       address: {
         "@type": "PostalAddress",
         streetAddress: "House #38, Road #02, 1st Floor",

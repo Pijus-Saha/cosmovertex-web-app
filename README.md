@@ -44,7 +44,7 @@ COSMOVERTEX empowers Bangladeshi students to achieve their international educati
 
 | Branch | Address | Phone | Direct Line |
 |---|---|---|---|
-| **Banani** *(Sky2Edu / CosmoVertex)* | House #38, Road #02, 1st Floor, Banani, Dhaka - 1213 | +880 1316-318387 | Mon–Sat, 10 AM – 7 PM |
+| **Banani** *(COSMOVERTEX INTERNATIONAL CONSULTANCY)* | House #38, Road #02, 1st Floor, Banani, Dhaka - 1213 | +880 1316-318387 | Mon–Sat, 10 AM – 7 PM |
 
 - 📧 **Email**: [info@cosmovertex.com](mailto:info@cosmovertex.com)
 - 💬 **WhatsApp**: [+880 1316-318387](https://wa.me/8801316318387)

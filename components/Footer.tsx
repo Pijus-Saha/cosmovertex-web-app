@@ -33,7 +33,7 @@ const destinations = [
 const offices = [
   {
     name: "Banani Office",
-    partner: "Sky2Edu / CosmoVertex",
+    partner: "COSMOVERTEX INTERNATIONAL CONSULTANCY",
     address: "House #38, Road #02, 1st Floor, Banani, Dhaka - 1213",
     icon: "🏢",
   },

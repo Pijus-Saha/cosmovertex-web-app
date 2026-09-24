@@ -36,7 +36,7 @@ const offices: OfficeLocation[] = [
   {
     id: "banani",
     name: "Banani Office",
-    partner: "Sky2Edu / CosmoVertex International",
+    partner: "COSMOVERTEX INTERNATIONAL CONSULTANCY",
     address: "House #38, Road #02, 1st Floor, Banani, Dhaka - 1213",
     phone: "+880 1316-318387",
     phone2: null,

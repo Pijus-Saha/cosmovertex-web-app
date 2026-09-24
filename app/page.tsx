@@ -19,6 +19,7 @@ import {
 import StatsBanner from "@/components/StatsBanner";
 import DestinationCard from "@/components/DestinationCard";
 import RoadmapTeaser from "@/components/RoadmapTeaser";
+import VisaSuccessVideos from "@/components/VisaSuccessVideos";
 
 export const metadata: Metadata = {
   title: "COSMOVERTEX — English Test Prep & Study Abroad Consultancy Dhaka",
@@ -152,7 +153,7 @@ const destinations = [
 const offices = [
   {
     name: "Banani Office",
-    partner: "Sky2Edu / CosmoVertex International",
+    partner: "COSMOVERTEX INTERNATIONAL CONSULTANCY",
     address: "House #38, Road #02, 1st Floor, Banani, Dhaka - 1213",
     icon: "🏢",
     phone: "+880 1316-318387",
@@ -391,6 +392,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Real Student Visa Approvals & Celebration Videos ── */}
+      <VisaSuccessVideos />
 
       {/* ── News & Updates ────────────────────────────────────── */}
       <section className="py-20 bg-brand-slate dark:bg-slate-900">

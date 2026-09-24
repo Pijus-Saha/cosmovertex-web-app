@@ -17,9 +17,9 @@ import {
 export interface VisaVideo {
   id: string;
   studentName: string;
-  destination: "Australia" | "United Kingdom";
+  destination: "Australia" | "United Kingdom" | "Malaysia & Pathway";
   flag: string;
-  category: "australia" | "uk";
+  category: "australia" | "uk" | "malaysia";
   title: string;
   milestone: string;
   details: string[];
@@ -118,6 +118,33 @@ const VISA_VIDEOS: VisaVideo[] = [
       gradient: "from-amber-600 to-orange-700",
     },
   },
+  {
+    id: "visa-video-malaysia-pathway",
+    studentName: "Mehedi",
+    destination: "Malaysia & Pathway",
+    flag: "🇲🇾",
+    category: "malaysia",
+    title: "Study in Malaysia — Your Pathway to USA, UK, Canada & Australia 🇲🇾",
+    milestone: "Global Degree Progression & Pathway Opportunity",
+    details: [
+      "Credit transfer pathways (1+3, 2+2, 2+1) to USA, UK, Canada & Australia",
+      "Affordable tuition & internationally recognized degree programs",
+      "Complete documentation, university admission & visa assistance",
+      "Flexible entry with English-medium global curriculum",
+    ],
+    shareUrl: "https://www.facebook.com/share/r/1PaSAvSMoB/",
+    canonicalVideoUrl: "https://www.facebook.com/CosmoVertex/videos/1087266410343510/",
+    embedIframeUrl:
+      "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FCosmoVertex%2Fvideos%2F1087266410343510%2F&show_text=0&width=500",
+    viewsEstimate: "Official Reel",
+    badgeText: "Pathway to 4 Nations",
+    themeColor: {
+      badge: "bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/30",
+      glow: "from-rose-500/20 to-amber-500/10",
+      border: "hover:border-rose-500/50",
+      gradient: "from-rose-600 to-amber-600",
+    },
+  },
 ];
 
 function FacebookIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -138,7 +165,7 @@ function FacebookIcon({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 interface VisaSuccessVideosProps {
-  filterDestination?: "Australia" | "United Kingdom";
+  filterDestination?: "Australia" | "United Kingdom" | "Malaysia" | "Malaysia & Pathway";
   compact?: boolean;
   customTitle?: string;
   customSubtitle?: string;
@@ -150,15 +177,19 @@ export default function VisaSuccessVideos({
   customTitle,
   customSubtitle,
 }: VisaSuccessVideosProps) {
-  const [activeTab, setActiveTab] = useState<"all" | "australia" | "uk">(() => {
+  const [activeTab, setActiveTab] = useState<"all" | "australia" | "uk" | "malaysia">(() => {
     if (filterDestination === "Australia") return "australia";
     if (filterDestination === "United Kingdom") return "uk";
+    if (filterDestination === "Malaysia" || filterDestination === "Malaysia & Pathway") return "malaysia";
     return "all";
   });
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
 
   const filteredVideos = VISA_VIDEOS.filter((video) => {
     if (filterDestination) {
+      if (filterDestination === "Malaysia" || filterDestination === "Malaysia & Pathway") {
+        return video.category === "malaysia";
+      }
       return video.destination === filterDestination;
     }
     if (activeTab === "all") return true;
@@ -172,8 +203,8 @@ export default function VisaSuccessVideos({
   return (
     <section
       className={`${compact
-          ? "py-14 sm:py-18 bg-[#071322] border-t border-b border-white/10"
-          : "py-20 md:py-28 bg-gradient-to-b from-slate-900 via-[#0B1528] to-slate-900"
+        ? "py-14 sm:py-18 bg-[#071322] border-t border-b border-white/10"
+        : "py-20 md:py-28 bg-gradient-to-b from-slate-900 via-[#0B1528] to-slate-900"
         } text-white relative overflow-hidden`}
     >
       {/* Background ambient decorative blurs */}
@@ -215,60 +246,94 @@ export default function VisaSuccessVideos({
             {customSubtitle ||
               (filterDestination
                 ? `Watch authentic visa stamping moments and student celebrations for ${filterDestination} directly from our official Facebook community.`
-                : "Witness the moments our students received their official visas for Australia and the United Kingdom. Watch their celebrations directly from our official Facebook community page.")}
+                : "Witness the moments our students received their official visas for Australia, the United Kingdom, and global pathway programs. Watch their celebrations directly from our official Facebook community page.")}
           </p>
 
           {/* Filter Tabs (only when not filtered to a single destination) */}
           {!filterDestination && (
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
+            <div
+              role="tablist"
+              aria-label="Filter visa success videos by destination"
+              className="flex flex-wrap items-center justify-center gap-2 mt-8"
+            >
               <button
+                role="tab"
+                aria-selected={activeTab === "all"}
                 onClick={() => setActiveTab("all")}
                 className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border ${activeTab === "all"
-                    ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold"
-                    : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
+                  ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold scale-105"
+                  : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
                   }`}
               >
                 All Visa Videos ({VISA_VIDEOS.length})
               </button>
               <button
+                role="tab"
+                aria-selected={activeTab === "australia"}
                 onClick={() => setActiveTab("australia")}
                 className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border flex items-center gap-1.5 ${activeTab === "australia"
-                    ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold"
-                    : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
+                  ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold scale-105"
+                  : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
                   }`}
               >
-                <span>🇦🇺</span> Australia Visa Stories (2)
+                <span>🇦🇺</span> Australia ({VISA_VIDEOS.filter((v) => v.category === "australia").length})
               </button>
               <button
+                role="tab"
+                aria-selected={activeTab === "uk"}
                 onClick={() => setActiveTab("uk")}
                 className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border flex items-center gap-1.5 ${activeTab === "uk"
-                    ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold"
-                    : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
+                  ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold scale-105"
+                  : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
                   }`}
               >
-                <span>🇬🇧</span> United Kingdom (1)
+                <span>🇬🇧</span> United Kingdom ({VISA_VIDEOS.filter((v) => v.category === "uk").length})
+              </button>
+              <button
+                role="tab"
+                aria-selected={activeTab === "malaysia"}
+                onClick={() => setActiveTab("malaysia")}
+                className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 border flex items-center gap-1.5 ${activeTab === "malaysia"
+                  ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 font-extrabold scale-105"
+                  : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
+                  }`}
+              >
+                <span>🇲🇾</span> Malaysia &amp; Pathways ({VISA_VIDEOS.filter((v) => v.category === "malaysia").length})
               </button>
             </div>
           )}
         </div>
 
         {/* Video Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 ${
+            filteredVideos.length === 1
+              ? "max-w-md mx-auto"
+              : filteredVideos.length === 2
+              ? "max-w-3xl mx-auto lg:grid-cols-2"
+              : "lg:grid-cols-2 xl:grid-cols-4"
+          } gap-6 lg:gap-8`}
+        >
           {filteredVideos.map((video) => {
             const isPlaying = playingVideoId === video.id;
 
             return (
               <div
                 key={video.id}
-                className={`group rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 ${video.themeColor.border}`}
+                className={`group rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-1 ${video.themeColor.border}`}
               >
                 {/* Video Player / Interactive Frame Area */}
                 <div className="relative aspect-video w-full bg-slate-950 overflow-hidden border-b border-white/10">
                   {isPlaying ? (
                     <div className="relative w-full h-full bg-black">
+                      {/* Loading spinner beneath the iframe while connecting to Facebook */}
+                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-slate-950 text-white/50 pointer-events-none">
+                        <div className="w-7 h-7 rounded-full border-2 border-emerald-500 border-t-transparent animate-spin" />
+                        <span className="text-[11px] font-medium tracking-wide">Connecting Facebook Player...</span>
+                      </div>
                       <iframe
-                        src={video.embedIframeUrl}
-                        className="w-full h-full border-0"
+                        src={`${video.embedIframeUrl}&autoplay=1`}
+                        className="relative z-1 w-full h-full border-0"
                         title={video.title}
                         allowFullScreen
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
@@ -276,10 +341,11 @@ export default function VisaSuccessVideos({
                       />
                       <button
                         onClick={() => handlePlayToggle(video.id)}
-                        className="absolute top-2 right-2 z-10 px-2.5 py-1 rounded-md bg-black/70 hover:bg-black/90 text-white/80 hover:text-white text-[11px] font-medium backdrop-blur-sm border border-white/20 flex items-center gap-1 transition-all"
+                        className="absolute top-2 right-2 z-10 px-2.5 py-1 rounded-md bg-black/80 hover:bg-black text-white/80 hover:text-white text-[11px] font-medium backdrop-blur-md border border-white/20 flex items-center gap-1.5 transition-all shadow-lg"
                         title="Close player"
+                        aria-label="Close video player"
                       >
-                        <RotateCcw className="w-3 h-3" />
+                        <RotateCcw className="w-3 h-3 text-emerald-400" />
                         <span>Close Player</span>
                       </button>
                     </div>
@@ -287,7 +353,7 @@ export default function VisaSuccessVideos({
                     <div className="relative w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-slate-900 via-[#0E1A30] to-slate-950">
                       {/* Top badges inside video preview */}
                       <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
-                        <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/10 backdrop-blur-md border border-white/15 text-white flex items-center gap-1.5">
+                        <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/10 backdrop-blur-md border border-white/15 text-white flex items-center gap-1.5 shadow-sm">
                           <span>{video.flag}</span>
                           <span>{video.destination}</span>
                         </span>
@@ -302,7 +368,7 @@ export default function VisaSuccessVideos({
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Watch video on Facebook"
-                          className="w-8 h-8 rounded-full bg-[#1877F2]/20 hover:bg-[#1877F2] text-white flex items-center justify-center border border-[#1877F2]/40 transition-colors"
+                          className="w-8 h-8 rounded-full bg-[#1877F2]/20 hover:bg-[#1877F2] text-white flex items-center justify-center border border-[#1877F2]/40 transition-colors shadow-sm"
                           title="Watch on Facebook"
                         >
                           <FacebookIcon className="w-4 h-4" />
@@ -342,17 +408,17 @@ export default function VisaSuccessVideos({
                     <div className="flex items-center justify-between gap-2 mb-2">
                       <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400">
                         <ShieldCheck className="w-3.5 h-3.5" />
-                        Verified Visa Grant
+                        {video.category === "malaysia" ? "Verified Pathway Program" : "Verified Visa Grant"}
                       </span>
                       <span className="text-[11px] text-white/40 font-mono">
                         {video.badgeText}
                       </span>
                     </div>
 
-                    <h3 className="font-heading text-xl font-bold text-white group-hover:text-emerald-300 transition-colors leading-snug">
+                    <h3 className="font-heading text-lg font-bold text-white group-hover:text-emerald-300 transition-colors leading-snug line-clamp-2">
                       {video.title}
                     </h3>
-                    <p className="text-xs font-medium text-white/60 mt-1 flex items-center gap-1.5">
+                    <p className="text-xs font-medium text-white/70 mt-1 flex items-center gap-1.5">
                       <GraduationCap className="w-3.5 h-3.5 text-sky-400" />
                       Candidate: <strong className="text-white font-semibold">{video.studentName}</strong>
                     </p>

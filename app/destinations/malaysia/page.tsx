@@ -82,6 +82,8 @@ const malaysiaIntakes = [
   "Rolling Monthly Intakes (Selected Campuses)",
 ];
 
+import VisaSuccessVideos from "@/components/VisaSuccessVideos";
+
 export default function MalaysiaPage() {
   return (
     <DestinationSimpleLayout
@@ -94,6 +96,8 @@ export default function MalaysiaPage() {
       highlights={malaysiaHighlights}
       intakeOptions={malaysiaIntakes}
       defaultIntake="March / Spring Intake"
-    />
+    >
+      <VisaSuccessVideos filterDestination="Malaysia & Pathway" compact />
+    </DestinationSimpleLayout>
   );
 }
