@@ -20,11 +20,112 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
+function isOriginAllowed(origin: string, request: NextRequest): boolean {
+  try {
+    const originUrl = new URL(origin);
+    const originHostname = originUrl.hostname.toLowerCase();
+    const originHost = originUrl.host.toLowerCase();
+
+    // 1. Same-origin comparison with the current request host (Netlify / Custom Domain)
+    const currentHost = (
+      request.headers.get("x-forwarded-host") ||
+      request.headers.get("host") ||
+      request.nextUrl.host
+    )?.toLowerCase();
+
+    if (currentHost) {
+      const currentHostOnly = currentHost.split(":")[0];
+      if (
+        originHost === currentHost ||
+        originHostname === currentHostOnly ||
+        originHostname === `www.${currentHostOnly}` ||
+        `www.${originHostname}` === currentHostOnly
+      ) {
+        return true;
+      }
+    }
+
+    // 2. Configured site URL (NEXT_PUBLIC_SITE_URL or SITE_URL)
+    const siteUrlEnv = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL;
+    if (siteUrlEnv) {
+      try {
+        const siteUrl = new URL(siteUrlEnv);
+        const siteHostname = siteUrl.hostname.toLowerCase();
+        if (
+          originHostname === siteHostname ||
+          originHostname === `www.${siteHostname}` ||
+          `www.${originHostname}` === siteHostname
+        ) {
+          return true;
+        }
+      } catch {
+        // ignore malformed env URL
+      }
+    }
+
+    // 3. Optional comma-separated ALLOWED_ORIGINS env variable
+    if (process.env.ALLOWED_ORIGINS) {
+      const allowedOrigins = process.env.ALLOWED_ORIGINS.split(",").map((s) => s.trim().toLowerCase());
+      if (
+        allowedOrigins.some(
+          (allowed) =>
+            originHostname === allowed ||
+            origin.toLowerCase() === allowed ||
+            originHostname.endsWith(`.${allowed}`)
+        )
+      ) {
+        return true;
+      }
+    }
+
+    // 4. Trusted brand and platform domains (including any cosmovertex domain, Netlify, and localhost)
+    if (
+      originHostname.includes("cosmovertex") ||
+      originHostname.endsWith(".netlify.app") ||
+      originHostname === "netlify.app" ||
+      originHostname === "localhost" ||
+      originHostname === "127.0.0.1"
+    ) {
+      return true;
+    }
+
+    return false;
+  } catch {
+    return false;
+  }
+}
+
+export async function OPTIONS(request: NextRequest) {
+  const origin = request.headers.get("origin");
+  const isAllowed = origin ? isOriginAllowed(origin, request) : false;
+
+  return new NextResponse(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": isAllowed && origin ? origin : "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
+}
+
 export async function POST(request: NextRequest) {
+  // 1. IP Detection (Prioritize Netlify edge client IP)
   const ip =
+    request.headers.get("x-nf-client-connection-ip") ||
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     "unknown";
 
+  // 2. Origin Verification (Block unauthorized cross-origin POST requests)
+  const origin = request.headers.get("origin");
+  if (origin && !isOriginAllowed(origin, request)) {
+    return NextResponse.json(
+      { error: "Cross-origin request rejected." },
+      { status: 403 }
+    );
+  }
+
+  // 3. Rate Limiting Check
   if (!checkRateLimit(ip)) {
     return NextResponse.json(
       { error: "Too many requests. Please try again later." },
@@ -43,6 +144,11 @@ export async function POST(request: NextRequest) {
       { error: "Invalid JSON request body." },
       { status: 400 }
     );
+  }
+
+  // 4. Honeypot Anti-Bot Filter
+  if (body._gotcha || body.website || body.company_fax) {
+    return NextResponse.json({ success: true, message: "Lead received" });
   }
 
   // Parse fields, supporting both new service-driven form and legacy forms

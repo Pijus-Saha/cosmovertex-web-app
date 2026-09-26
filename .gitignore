@@ -34,9 +34,20 @@ yarn-error.log*
 .env*
 !.env.example
 
-# vercel
+# vercel & netlify
 .vercel
+.netlify
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# agent / IDE files
+.agents/
+.gemini/
+.vscode/
+.idea/
+
+# OS / logs
+Thumbs.db
+*.log

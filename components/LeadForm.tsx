@@ -17,7 +17,6 @@ import {
   GraduationCap,
   BookOpen,
   Compass,
-  MapPin,
   Building2,
   Globe,
   Phone,

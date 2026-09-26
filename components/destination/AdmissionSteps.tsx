@@ -2,13 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-  UserCheck,
-  BookOpen,
-  FileCheck2,
-  Landmark,
-  PlaneTakeoff,
-  Award,
-  AlertTriangle,
   CheckCircle2,
   QrCode,
 } from "lucide-react";
@@ -115,25 +108,6 @@ export default function AdmissionSteps({
   destinationName,
   steps = defaultSteps,
 }: AdmissionStepsProps) {
-  const getStepIcon = (num: number) => {
-    switch (num) {
-      case 1:
-        return <UserCheck className="w-5 h-5 text-emerald-500" />;
-      case 2:
-        return <BookOpen className="w-5 h-5 text-blue-500" />;
-      case 3:
-        return <FileCheck2 className="w-5 h-5 text-indigo-500" />;
-      case 4:
-        return <Landmark className="w-5 h-5 text-amber-500" />;
-      case 5:
-        return <Award className="w-5 h-5 text-rose-500" />;
-      case 6:
-        return <PlaneTakeoff className="w-5 h-5 text-teal-500" />;
-      default:
-        return <CheckCircle2 className="w-5 h-5 text-emerald-500" />;
-    }
-  };
-
   return (
     <section className="py-20 bg-brand-slate dark:bg-slate-900/70 border-y border-slate-100 dark:border-slate-800 transition-colors">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

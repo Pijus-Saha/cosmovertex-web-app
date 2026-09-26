@@ -9,7 +9,7 @@
 
 Bangladesh's premier English proficiency test preparation center and study abroad consultancy, based in Dhaka. Official web platform for **COSMOVERTEX** (also established under **Doctor of SEL** & **Sky2Edu**).
 
-🌐 **Official Website**: [https://cosmovertex.edu.bd](https://cosmovertex.edu.bd)
+🌐 **Official Website**: [https://cosmovertex.com](https://cosmovertex.com)
 
 ---
 
@@ -191,7 +191,7 @@ Populate the configuration values:
 
 ```env
 # Base URL for canonical links and OpenGraph previews
-NEXT_PUBLIC_SITE_URL=https://cosmovertex.edu.bd
+NEXT_PUBLIC_SITE_URL=https://cosmovertex.com
 
 # Email notifications via Resend (https://resend.com)
 RESEND_API_KEY=re_your_api_key_here
@@ -202,9 +202,26 @@ NEXT_PUBLIC_WHATSAPP_NUMBER=8801316318387
 
 # Promo Video URL (supports Google Drive share links or YouTube URLs)
 NEXT_PUBLIC_PROMO_VIDEO_ID=https://drive.google.com/file/d/1j-dp0gIaJ-G0BvI_X8SIiaETaXfwHWih/view?usp=sharing
+
+# Optional: Google Sheets Live CRM Sync (Apps Script Webhook)
+GOOGLE_SHEET_WEBHOOK_URL=https://script.google.com/macros/s/AKfycb.../exec
 ```
 
 > **Note**: If `RESEND_API_KEY` is not provided, the contact form automatically logs submissions to the terminal in development mode so you can test form flows without an API key.
+
+### 📬 Managing Leads & Gmail Organization (Filter Setup)
+
+To keep your **Primary inbox 100% clean** and prevent incoming lead alerts from cluttering personal/client emails, set up a dedicated Gmail filter:
+
+1. **Open Search Options**: In Gmail search bar, click the sliders icon on the far right.
+2. **Set Filter Condition**:
+   - **Subject**: `[COSMOVERTEX Lead]` *(All form submissions start with this exact tag)*
+3. **Choose Actions** (click **Create filter**):
+   - ☑️ **Skip the Inbox (Archive it)**
+   - ☑️ **Apply the label**: create a new label (e.g. `🎯 Leads` or `Cosmovertex Leads`)
+   - ☑️ **Never send it to Spam**
+   - ☑️ **Also apply filter to matching conversations**
+4. **Result**: Inquiries bypass your Primary inbox and file automatically under your `🎯 Leads` folder with an unread badge counter and 1-click WhatsApp chat link.
 
 ### 3. Run Development Server
 
@@ -229,23 +246,38 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to inspect t
 
 ## 🚢 Deployment
 
-The project is optimized for deployment on [Vercel](https://vercel.com/).
+The project is optimized for deployment on both **[Netlify](https://www.netlify.com/)** and **[Vercel](https://vercel.com/)**.
 
-1. Connect the GitHub repository to your Vercel team account.
-2. Ensure Framework Preset is detected as **Next.js**.
-3. Add the required environment variables in **Project Settings → Environment Variables**:
-   - `RESEND_API_KEY`
-   - `NOTIFICATION_EMAIL`
-   - `NEXT_PUBLIC_WHATSAPP_NUMBER`
-   - `NEXT_PUBLIC_SITE_URL`
-   - `NEXT_PUBLIC_PROMO_VIDEO_ID`
-4. Deploy the project. Vercel automatically creates preview and production deployments upon push.
+### Deploying on Netlify (Pre-Configured)
+The repository includes a ready-to-use [`netlify.toml`](./netlify.toml), `@netlify/plugin-nextjs`, and [`.node-version`](./.node-version).
+1. Connect this repository to your Netlify account via **"Add new site" → "Import an existing project"**.
+2. Netlify will auto-detect Next.js and apply build settings (`npm run build`, publish dir `.next`).
+3. Add environment variables under **Site configuration → Environment variables**.
+4. Click **Deploy**.
 
-For full custom domain setup, DNS records (`A` & `CNAME`), and Resend domain verification, refer to [`VERCEL_DEPLOYMENT.md`](./VERCEL_DEPLOYMENT.md).
+For detailed step-by-step instructions, environment variables reference, custom domain DNS, and troubleshooting, read [`NETLIFY_DEPLOYMENT.md`](./NETLIFY_DEPLOYMENT.md).
+
+### Deploying on Vercel
+For deploying on Vercel, refer to [`VERCEL_DEPLOYMENT.md`](./VERCEL_DEPLOYMENT.md).
+
+---
+
+## 👨‍💻 Engineering Highlights & Portfolio Showcase
+
+This project serves as a production-grade showcase demonstrating modern full-stack web engineering practices:
+
+- **Next.js 16 App Router & React 19**: Leveraging React Server Components (RSC) for rapid initial load times, zero-bundle-cost data rendering, and modular Route Handlers.
+- **Resilient Multi-Channel CRM Pipeline**: Automated asynchronous lead dispatch via **Resend Email API** combined with an automated **Google Apps Script Webhook** capturing counseling requests into Google Sheets in real time.
+- **Type-Safe Form Architecture**: Strict schema validation using **Zod 4** and **React Hook Form**, offering instant client-side feedback and sanitization.
+- **Design System & Performance**: Custom dark/light theming via `next-themes`, glassmorphic navigation, fluid typography, and hardware-accelerated animations via **Framer Motion** and **Tailwind CSS v4**.
+- **Search Engine Optimization (SEO)**: Full semantic HTML5 structure, automated `sitemap.xml`, `robots.txt`, dynamic OpenGraph previews, and `JSON-LD` schemas for rich search indexing.
+
+**Developed by:** [Pijus Saha](https://github.com/pijussaha)  
+**Live Site:** [https://cosmovertex.com](https://cosmovertex.com)
 
 ---
 
 ## 📄 License & Ownership
 
-Private repository. All rights reserved © **COSMOVERTEX**.
-Unauthorized reproduction or commercial redistribution of brand assets, gallery media, or proprietary course information is strictly prohibited.
+Codebase structure and custom engineering © **Pijus Saha**.  
+Brand assets, student media, and business identity © **COSMOVERTEX INTERNATIONAL CONSULTANCY**. All rights reserved.

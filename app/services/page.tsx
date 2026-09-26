@@ -11,7 +11,6 @@ import {
   HeadphonesIcon,
   Clock,
   Globe2,
-  GraduationCap,
   Sparkles,
 } from "lucide-react";
 import ServicesTabs, { TestService } from "@/components/ServicesTabs";

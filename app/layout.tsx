@@ -20,7 +20,7 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cosmovertex.edu.bd";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cosmovertex.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -10,7 +10,6 @@ import {
   GraduationCap,
   Clock,
   Coins,
-  CheckCircle2,
   Building2,
   TrendingUp,
   ArrowRight,

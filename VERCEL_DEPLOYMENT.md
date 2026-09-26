@@ -48,8 +48,8 @@ In the Vercel project dashboard → **Settings → Environment Variables**, add:
 | Variable Name | Value | Environment |
 |---|---|---|
 | `RESEND_API_KEY` | `re_xxxxxxxxxxxxxxxx` (from https://resend.com) | Production, Preview |
-| `RESEND_FROM_EMAIL` | `noreply@cosmovertex.edu.bd` | Production, Preview |
-| `NEXT_PUBLIC_SITE_URL` | `https://cosmovertex.edu.bd` | Production |
+| `RESEND_FROM_EMAIL` | `noreply@cosmovertex.com` | Production, Preview |
+| `NEXT_PUBLIC_SITE_URL` | `https://cosmovertex.com` | Production |
 
 > ⚠️ **Important**: The `RESEND_FROM_EMAIL` domain must be verified in your Resend account. Without `RESEND_API_KEY`, the contact form falls back to mock mode (logs to console only).
 
@@ -58,7 +58,7 @@ In the Vercel project dashboard → **Settings → Environment Variables**, add:
 ## Step 4 — Custom Domain
 
 1. Vercel Dashboard → your project → **Settings → Domains**
-2. Add your domain: `cosmovertex.edu.bd` (or your preferred domain)
+2. Add your domain: `cosmovertex.com` (or your preferred domain)
 3. Follow the DNS instructions to add a CNAME/A record at your registrar
 4. SSL is auto-provisioned by Vercel (Let's Encrypt)
 5. **Update `NEXT_PUBLIC_SITE_URL`** to your live domain after pointing DNS
@@ -67,7 +67,7 @@ In the Vercel project dashboard → **Settings → Environment Variables**, add:
 
 ## Step 5 — Update Sitemap URL
 
-After setting your domain, update `/public/sitemap.xml` to replace `https://cosmovertex.edu.bd` with your actual domain:
+After setting your domain, update `/public/sitemap.xml` to replace `https://cosmovertex.com` with your actual domain:
 
 ```xml
 <!-- Replace all instances of doctorsel.com with your domain -->
@@ -84,10 +84,10 @@ Sitemap: https://yourdomain.com/sitemap.xml
 ## Step 6 — Resend Email Setup
 
 1. Create account at [https://resend.com](https://resend.com)
-2. Add & verify your sending domain (e.g., `cosmovertex.edu.bd`) under **Domains**
+2. Add & verify your sending domain (e.g., `cosmovertex.com`) under **Domains**
 3. Create an API key under **API Keys**
 4. Set `RESEND_API_KEY` in Vercel environment variables
-5. Set `RESEND_FROM_EMAIL` to `noreply@cosmovertex.edu.bd` (or your verified domain email)
+5. Set `RESEND_FROM_EMAIL` to `noreply@cosmovertex.com` (or your verified domain email)
 6. Leads will now email to `info@cosmovertex.com` with a WhatsApp reply button
 
 ---

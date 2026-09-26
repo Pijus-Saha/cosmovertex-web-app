@@ -1,48 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://doctorsel.com/</loc>
+    <loc>https://cosmovertex.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://doctorsel.com/services</loc>
+    <loc>https://cosmovertex.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://doctorsel.com/destinations/south-korea</loc>
+    <loc>https://cosmovertex.com/destinations/south-korea</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://doctorsel.com/destinations/europe</loc>
+    <loc>https://cosmovertex.com/destinations/usa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://doctorsel.com/destinations/uk</loc>
+    <loc>https://cosmovertex.com/destinations/uk</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://doctorsel.com/destinations/usa</loc>
+    <loc>https://cosmovertex.com/destinations/canada</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://doctorsel.com/destinations/australia</loc>
+    <loc>https://cosmovertex.com/destinations/australia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://doctorsel.com/gallery</loc>
+    <loc>https://cosmovertex.com/destinations/new-zealand</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cosmovertex.com/destinations/malaysia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cosmovertex.com/destinations/europe</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cosmovertex.com/gallery</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://doctorsel.com/contact</loc>
+    <loc>https://cosmovertex.com/contact</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>
